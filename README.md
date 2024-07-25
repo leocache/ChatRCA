@@ -2,8 +2,8 @@
 
 This repository is a basic implementation of the method proposed in our published paper "ChatRCA...".This warehouse has three branches, and the content of each branch is as follows.
 
-|   BranchI    |                          Introduce                           |
-| :----------: | :----------------------------------------------------------: |
+|    Branch    |                          Introduce                           |
+|:------------:| :----------------------------------------------------------: |
 |    master    |  The branch stores the basic ChatRCA method we implemented.  |
 | GPT-4o_Embed | The branch corresponds to the baseline method "GPT-4o_Embed" that we implemented in the paper. |
 |   Prompted   | The branch corresponds to the baseline method "GPT-3.5 Turbo/4o Prompted" that we implemented in the paper. |
