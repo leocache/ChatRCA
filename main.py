@@ -2,7 +2,6 @@ import re
 from Agents import *
 from Tooluse import *
 from CSV2md import remove_suffix
-# 清除倒数第一个“-”及以后的字符
 
 
 if __name__ == '__main__':
