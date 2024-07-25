@@ -1,6 +1,6 @@
 # ChatRCA
 
-This repository is a basic implementation of the method proposed in our paper "ChatRCA: Enhancing Root Cause Analysis via LLM based Multi-Agents with Human-in-the-Loop".  Additionally, we implemented implementations against non-open source baseline methods.
+This repository is a basic implementation of the method proposed in our paper "ChatRCA: Enhancing Root Cause Analysis via LLM based Multi-Agents with Human-in-the-Loop".  In addition, we also implemented the non-open source baseline method.
 
 |         File Directory          |                          Introduce                           |
 | :-----------------------------: | :----------------------------------------------------------: |
