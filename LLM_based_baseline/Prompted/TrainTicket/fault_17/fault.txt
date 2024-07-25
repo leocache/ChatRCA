@@ -1,0 +1,6 @@
+{
+    "inject_time": "2023-01-29 10:45:10",
+    "inject_timestamp": "1674960250",
+    "inject_pod": "ts-travel2-service-5c66d57d58-6mp2b",
+    "inject_type": "exception"
+}

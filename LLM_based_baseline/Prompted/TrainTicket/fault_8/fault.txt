@@ -1,0 +1,6 @@
+{
+    "inject_time": "2023-01-29 09:30:09",
+    "inject_timestamp": "1674955899",
+    "inject_pod": "ts-food-service-f5756978c-k8vqf",
+    "inject_type": "return"
+}

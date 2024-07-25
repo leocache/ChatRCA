@@ -1,0 +1,10 @@
+TimeUnixNano,TraceID,SpanID,Log
+1674982327491075623,t3,s1010,"ERROR f.s.FoodServiceImpl#302 [getAllFood][Get the Get Food Request Failed!][foodStoresListResult is null][date: 2021-07-14, tripId: D1345]"
+1674982327567507630,t10,s1011,ERROR  c.s.ContactsServiceImpl#37 [findContactsById][contactsRepository.findById][No contacts according to contactsId]
+1674982325599395173,t5,s294,ERROR  c.s.ContactsServiceImpl#37 [findContactsById][contactsRepository.findById][No contacts according to contactsId]
+1674982348265741625,t6,s1872,"ERROR f.s.FoodServiceImpl#302 [getAllFood][Get the Get Food Request Failed!][foodStoresListResult is null][date: 2021-07-14, tripId: D1345]"
+1674982348571340118,t23,s2031,ERROR o.a.c.c.C.[.[.[.[dispatcherServlet]#175 Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: No instances available for ts-food-service] with root cause
+1674982348354893894,t23,s2039,ERROR  c.s.ContactsServiceImpl#37 [findContactsById][contactsRepository.findById][No contacts according to contactsId]
+1674982348265741625,t6,s1872,"ERROR f.s.FoodServiceImpl#302 [getAllFood][Get the Get Food Request Failed!][foodStoresListResult is null][date: 2021-07-14, tripId: D1345]"
+1674982348571340118,t23,s2031,ERROR o.a.c.c.C.[.[.[.[dispatcherServlet]#175 Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: No instances available for ts-food-service] with root cause
+1674982348354893894,t23,s2039,ERROR  c.s.ContactsServiceImpl#37 [findContactsById][contactsRepository.findById][No contacts according to contactsId]

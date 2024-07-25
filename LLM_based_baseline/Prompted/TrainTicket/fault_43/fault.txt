@@ -1,0 +1,6 @@
+{
+    "inject_time": "2023-01-30 13:52:20",
+    "inject_timestamp": "1675086740",
+    "inject_pod": "ts-route-service-b6c59fb57-dz9bw",
+    "inject_type": "network_delay"
+}

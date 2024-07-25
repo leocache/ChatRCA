@@ -1,0 +1,9 @@
+TimeUnixNano,TraceID,SpanID,Log
+1674989425299870523,t33,s1316,ERROR o.a.c.c.C.[.[.[.[dispatcherServlet]#175 Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: No instances available for ts-basic-service] with root cause
+1674989443136618688,t20,s994,ERROR o.a.c.c.C.[.[.[.[dispatcherServlet]#175 Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: No instances available for ts-basic-service] with root cause
+1674989450895199704,t8,s1536,ERROR o.a.c.c.C.[.[.[.[dispatcherServlet]#175 Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: No instances available for ts-seat-service] with root cause
+1674989424937790253,t28,s1987,"ERROR f.s.FoodServiceImpl#302 [getAllFood][Get the Get Food Request Failed!][foodStoresListResult is null][date: 2021-07-14, tripId: D1345]"
+1674989442856894163,t11,s1011,"ERROR f.s.FoodServiceImpl#302 [getAllFood][Get the Get Food Request Failed!][foodStoresListResult is null][date: 2021-07-14, tripId: D1345]"
+1674989450569670296,t19,s375,"ERROR f.s.FoodServiceImpl#302 [getAllFood][Get the Get Food Request Failed!][foodStoresListResult is null][date: 2021-07-14, tripId: D1345]"
+1674989442437442016,t26,s1080,ERROR e.s.ExecuteServiceImpl#51 [ticketExecute][getOrderByIdFromOrder][ticket execute error: Order Status Wrong][orderId: 52dfd278-54a8-4e6e-a2da-944d88bd3bbf]
+1674989434107219325,t22,s1799,ERROR e.s.ExecuteServiceImpl#51 [ticketExecute][getOrderByIdFromOrder][ticket execute error: Order Status Wrong][orderId: a257781b-5d66-48ed-a2be-6c134493f57f]

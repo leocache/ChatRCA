@@ -1,0 +1,3 @@
+TimeUnixNano,TraceID,SpanID,Log
+1674991205481265375,t7,s399,"ERROR f.s.FoodServiceImpl#302 [getAllFood][Get the Get Food Request Failed!][foodStoresListResult is null][date: 2021-07-14, tripId: D1345]"
+1674991206308638457,t6,s276,ERROR o.a.c.c.C.[.[.[.[dispatcherServlet]#175 Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: No instances available for ts-basic-service] with root cause

@@ -1,0 +1,9 @@
+TimeUnixNano,TraceID,SpanID,Log
+1674986293824419634,t7,s457,"ERROR f.s.FoodServiceImpl#302 [getAllFood][Get the Get Food Request Failed!][foodStoresListResult is null][date: 2021-07-14, tripId: D1345]"
+1674986300177627244,t25,s173,"ERROR f.s.FoodServiceImpl#302 [getAllFood][Get the Get Food Request Failed!][foodStoresListResult is null][date: 2021-07-14, tripId: D1345]"
+1674986293086783184,t22,s1500,ERROR e.s.ExecuteServiceImpl#69 [ticketExecute][getOrderByIdFromOrderOther][ticket execute error: Order Status Wrong][orderId: b336e6ba-9cef-480f-be25-6c9805682bf7]
+1674986309739140423,t26,s225,ERROR e.s.ExecuteServiceImpl#69 [ticketExecute][getOrderByIdFromOrderOther][ticket execute error: Order Status Wrong][orderId: 0edf9f41-5aba-4dec-a77b-05380e3fc499]
+1674986309872373073,t6,s27,ERROR  v.s.i.VerifyCodeServiceImpl#129 [verifyCode][Get image code warn][Code not found]
+1674986310291905388,t17,s301,ERROR  v.s.i.VerifyCodeServiceImpl#129 [verifyCode][Get image code warn][Code not found]
+1674986300276278994,t13,s1786,ERROR o.a.c.c.C.[.[.[.[dispatcherServlet]#175 Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: No instances available for ts-travel-service] with root cause
+1674986286495271219,t15,s526,"ERROR f.s.FoodServiceImpl#302 [getAllFood][Get the Get Food Request Failed!][foodStoresListResult is null][date: 2021-07-14, tripId: D1345]"

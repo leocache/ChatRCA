@@ -1,0 +1,10 @@
+TimeUnixNano,TraceID,SpanID,Log
+1674983585395681350,t10,s492,ERROR  f.m.s.BasicServiceImpl#415 [getRoutesByRouteIds][getRoutesByRouteIds][Get Route By Ids Failed]
+1674983582235100797,t1,s456,ERROR o.a.c.c.C.[.[.[.[dispatcherServlet]#175 Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: No instances available for ts-seat-service] with root cause
+1674983582218617512,t1,s545,ERROR  f.m.s.BasicServiceImpl#415 [getRoutesByRouteIds][getRoutesByRouteIds][Get Route By Ids Failed]
+1674983578479703701,t2,s93,ERROR o.a.c.c.C.[.[.[.[dispatcherServlet]#175 Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: No instances available for ts-seat-service] with root cause
+1674983578463303662,t2,s551,ERROR  f.m.s.BasicServiceImpl#415 [getRoutesByRouteIds][getRoutesByRouteIds][Get Route By Ids Failed]
+1674983576831030246,t6,s434,ERROR o.a.c.c.C.[.[.[.[dispatcherServlet]#175 Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: No instances available for ts-seat-service] with root cause
+1674983576813899320,t6,s179,ERROR  f.m.s.BasicServiceImpl#415 [getRoutesByRouteIds][getRoutesByRouteIds][Get Route By Ids Failed]
+1674983577112141502,t7,s51,ERROR o.a.c.c.C.[.[.[.[dispatcherServlet]#175 Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: No instances available for ts-seat-service] with root cause
+1674983577097988925,t7,s459,ERROR  f.m.s.BasicServiceImpl#415 [getRoutesByRouteIds][getRoutesByRouteIds][Get Route By Ids Failed]

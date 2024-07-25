@@ -1,0 +1,6 @@
+TimeUnixNano,TraceID,SpanID,Log
+1674982729683324476,t9,s237,"ERROR f.s.FoodServiceImpl#302 [getAllFood][Get the Get Food Request Failed!][foodStoresListResult is null][date: 2021-07-14, tripId: D1345]"
+1674982705754549794,t13,s862,"ERROR f.s.FoodServiceImpl#302 [getAllFood][Get the Get Food Request Failed!][foodStoresListResult is null][date: 2021-07-14, tripId: D1345]"
+1674982729779499951,t1,s164,ERROR  c.s.ContactsServiceImpl#37 [findContactsById][contactsRepository.findById][No contacts according to contactsId]
+1674982706255630942,t7,s1310,ERROR o.a.c.c.C.[.[.[.[dispatcherServlet]#175 Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: No instances available for ts-basic-service] with root cause
+1674982706106066188,t7,s1269,ERROR  c.s.ContactsServiceImpl#37 [findContactsById][contactsRepository.findById][No contacts according to contactsId]

@@ -1,0 +1,6 @@
+TimeUnixNano,TraceID,SpanID,Log
+1675080392933599107,t18,s674,ERROR e.s.ExecuteServiceImpl#69 [ticketExecute][getOrderByIdFromOrderOther][ticket execute error: Order Status Wrong][orderId: 5c2bf91b-36d0-41bc-87b6-84ce9d28eaa5]
+1675080388195495627,t13,s74,"ERROR f.s.FoodServiceImpl#302 [getAllFood][Get the Get Food Request Failed!][foodStoresListResult is null][date: 2021-07-14, tripId: D1345]"
+1675080388564210995,t3,s1444,ERROR o.a.c.c.C.[.[.[.[dispatcherServlet]#175 Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: No instances available for ts-user-service] with root cause
+1675080376287937164,t28,s293,ERROR o.a.c.c.C.[.[.[.[dispatcherServlet]#175 Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: No instances available for ts-user-service] with root cause
+1675080387458535701,t32,s612,ERROR o.a.c.c.C.[.[.[.[dispatcherServlet]#175 Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: No instances available for ts-user-service] with root cause

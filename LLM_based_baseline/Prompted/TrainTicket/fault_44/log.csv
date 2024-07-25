@@ -1,0 +1,6 @@
+TimeUnixNano,TraceID,SpanID,Log
+1675087231762580199,t17,s636,"ERROR f.s.FoodServiceImpl#302 [getAllFood][Get the Get Food Request Failed!][foodStoresListResult is null][date: 2021-07-14, tripId: D1345]"
+1675087242880057528,t12,s524,"ERROR f.s.FoodServiceImpl#302 [getAllFood][Get the Get Food Request Failed!][foodStoresListResult is null][date: 2021-07-14, tripId: D1345]"
+1675087245724137713,t15,s770,ERROR e.s.ExecuteServiceImpl#51 [ticketExecute][getOrderByIdFromOrder][ticket execute error: Order Status Wrong][orderId: ba6eb094-dd52-44d5-bab4-793b6a13787c]
+1675087227117047572,t26,s2040,ERROR e.s.ExecuteServiceImpl#51 [ticketExecute][getOrderByIdFromOrder][ticket execute error: Order Status Wrong][orderId: ba6eb094-dd52-44d5-bab4-793b6a13787c]
+1675087231137103185,t16,s1589,ERROR e.s.ExecuteServiceImpl#51 [ticketExecute][getOrderByIdFromOrder][ticket execute error: Order Status Wrong][orderId: d9337a21-bd83-433a-a137-acf5ab52c9b2]

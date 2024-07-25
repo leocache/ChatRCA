@@ -1,0 +1,6 @@
+{
+    "inject_time": "2023-01-29 14:49:57",
+    "inject_timestamp": "1675003797",
+    "inject_pod": "ts-food-service-f5756978c-k8vqf",
+    "inject_type": "cpu_contention"
+}

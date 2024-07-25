@@ -1,12 +1,12 @@
 # ChatRCA
 
-This repository is a basic implementation of the method proposed in our published paper "ChatRCA...".This warehouse has three branches, and the content of each branch is as follows.
+This repository is a basic implementation of the method proposed in our paper "ChatRCA: Enhancing Root Cause Analysis via LLM based Multi-Agents with Human-in-the-Loop".  Additionally, we implemented implementations against non-open source baseline methods.
 
-|    Branch    |                          Introduce                           |
-|:------------:| :----------------------------------------------------------: |
-|    master    |  The branch stores the basic ChatRCA method we implemented.  |
-| GPT-4o_Embed | The branch corresponds to the baseline method "GPT-4o_Embed" that we implemented in the paper. |
-|   Prompted   | The branch corresponds to the baseline method "GPT-3.5 Turbo/4o Prompted" that we implemented in the paper. |
+|         File Directory          |                          Introduce                           |
+| :-----------------------------: | :----------------------------------------------------------: |
+|         Root directory          | The Root directory stores the basic ChatRCA method we implemented. |
+| LLM_based_baseline/GPT-4o_Embed | The directory corresponds to the baseline method "GPT-4o_Embed" that we implemented in the paper. |
+|   LLM_based_baseline/Prompted   | The directory corresponds to the baseline method "GPT-3.5 Turbo/4o Prompted" that we implemented in the paper. |
 
 ## Description
 
@@ -106,6 +106,23 @@ We organized the D1 dataset, mainly by indexing it by fault, and storing it in t
 │  ├─fault_3
 │  ├─fault_4          
 │  requirements.txt  
+├─LLM_based_baseline: Baseline method implementation.
+│  ├─GPT-4o_Embed: Baseline method "GPT-4o_Embed" implementation.
+│  │  │  .env.example
+│  │  │  config.yaml
+│  │  │  CSV2md.py
+│  │  │  RAG.py
+│  │  │  rag_knowledge.md
+│  │  │  requirements.txt
+│  │  │  Tooluse.py
+│  └─Prompted: Baseline method "Prompted" implementation.
+│      │  .env.example
+│      │  Agents.py
+│      │  config.yaml
+│      │  CSV2md.py
+│      │  main.py
+│      │  requirements.txt
+│      │  Tooluse.py
 │  .gitignore
 
 
