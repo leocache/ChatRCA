@@ -1,0 +1,7 @@
+StartTimeUnixNano,EndTimeUnixNano,Duration,TraceID,SpanID,ParentID,PodName,OperationName
+1674981797109000000,1674981797122751488,13751,t10,s1956,s1534,ts-contacts-service,/api/v1/contactservice/contacts/{id}
+1674981797111654629,1674981797121602420,9947,t10,s799,s1956,ts-contacts-service,ContactsController.getContactsByContactsId
+1674981797113569079,1674981797119963916,6394,t10,s2276,s799,ts-contacts-service,ContactsRepository.findById
+1674981797115525775,1674981797117818327,2292,t10,s1545,s2276,ts-contacts-service,Session.find contacts.entity.Contacts
+1674981797117940800,1674981797119321182,1380,t10,s2319,s2276,ts-contacts-service,Transaction.commit
+1674981797115959349,1674981797117030239,1070,t10,s410,s1545,ts-contacts-service,SELECT ts.contacts
