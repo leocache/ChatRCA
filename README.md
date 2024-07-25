@@ -1,66 +1,113 @@
-# 7月23日更新
-## 核心代码
-新增RAG.py基线方法代码  
+# ChatRCA
 
-改进Tooluse，三类代码可以由partdata(kind)分别图区,kind为文件名，如'log.csv'  
+This repository is a basic implementation of the method proposed in our published paper "ChatRCA...".This warehouse has three branches, and the content of each branch is as follows.
 
-依旧只用改yaml即可收集文件运行
+|   BranchI    |                          Introduce                           |
+| :----------: | :----------------------------------------------------------: |
+|    master    |  The branch stores the basic ChatRCA method we implemented.  |
+| GPT-4o_Embed | The branch corresponds to the baseline method "GPT-4o_Embed" that we implemented in the paper. |
+|   Prompted   | The branch corresponds to the baseline method "GPT-3.5 Turbo/4o Prompted" that we implemented in the paper. |
 
+## Description
 
-# 7月11日更新
-## 数据
-已加入轨迹(trace)数据 ----- 只针对Nezha(TrainTicket)数据集；私有数据集只有部分metric
+ChatRCA is an advanced tool for root cause analysis of cloud events. It builds a multi-intelligent agent root cause analysis method with humans in the loop, simulating the collaborative model in real-world root cause analysis. ChatRCA provides a new path for root cause analysis.
 
+## Quick Start
 
-## 核心代码
-分为Prompt和Agent两大类，放在各个支线  
+### Requirements
 
-按照数据集分类：TrainTicket和private  
+We recommend using Python version > 3.10 for this project. Other dependencies are listed in the `requirements.txt` file.
 
-按照大模型运行分类（3.5需要修剪数据，4o即为原数据）:3.5版本
+### Preparatory steps
 
+1. Run the following command to clone our project:
 
-## 运行方式
-现加入将fault.txt读取为json数据功能，每次只需修改config.yaml文件即可
+```
+git clone https://github.com/leocache/ChatRCA.git
+```
 
+2. Navigate to the project root directory.
 
-## 各支线解释
-**main：** 用于4o模型、RCAgent方法  
+3. Install the project dependencies:
 
-**prompt版本：** 4o模型、prompt方法  
-
-**gpt3.5专用：** 3.5-turbo模型、RCAgent方法、修剪过的数据  
-
-**3.5prompt：** 3.5-turbo模型、prompt方法、使用修剪过的数据  
-
-**private：** 暂时为RCAgent方法，模型无限制、private数据集（现仍然待完善的数据集）
-
-
-
-# ICSE25
-**关于数据转换**
-整理好的数据通过CSVtomd转换为md 然后在 fault文件夹下创建fault.txt 然后把md文件放进去 目前先放入日志(log)和指标(metric)数据
-
-
-**关于核心代码**
-agentswokflow运行，在代码最后修改当前故障类型和描述 其他的可以下载下去尝试调试，prompt并不一定最好。
-使用时注意tooluse有一个读取路径 确保读取的是你所测试的故障数据
-
-**关于结果**
-运行结果参考fault1中result的txt文件，将输出复制生成txt 禁止截图
-
-**关于核心代码解释和尝试优化**
-核心agent主要有4个
-Operator负责代码执行，当前主要执行观测工程师的工具
-观测工程师负责提供日志等数据
-Calvin 是主要负责根因分析的工程师
-John 是协助负责根因分析提出有效意见的辅助专家
-
-**运行方式**
-代码现已重构，方便运行，拉取代码后请先运行
+```
 pip install -r requirements.txt
-openai_key已经在.env环境中配置，无需更改，请勿泄漏
-运行方式：
-你需要跑哪个错误，只需要在config.yaml中修改相应信息。
-然后修改main中的初始描述，即可运行。
+```
+
+4. Rename `.env.example` to `.env` . Then fill in your OpenAI api_key in the `.env` file.
+
+### Running ChatRCA
+
+1. Operation and maintenance data is indexed by faults and stored in TrainTicket/fault_* files. You need to modify the fault option in the config.yaml file as the data source for ChatRCA to read.
+
+   ```
+   fault: fault_1
+   ```
+
+2. Next, execute the "main.py" file directly.
+
+   We can find that the "User_proxy_agent" will start a system dialogue, in which it will tell the system what has happened. The system will then read data and analyze the failure according to the logic we designed. During this period, humans can intervene at any time, which is what we call Human-in-the-Loop in our paper.
+
+```
+User_proxy_agent (to chat_manager):
+
+The current cloud system experienced a failure at 2023-01-29 09:25:39. The current ts-basic-service service is affected. Please analyze the root cause.
+
+--------------------------------------------------------------------------------
+
+Next speaker: OperationEngineer
+
+Provide feedback to chat_manager. Press enter to skip and use auto-reply, or type 'exit' to end the conversation: 
+
+>>>>>>>> NO HUMAN INPUT RECEIVED.
+
+>>>>>>>> USING AUTO REPLY...
+OperationEngineer (to chat_manager):
+
+Certainly, let's proceed with the analysis step by step:
+1. **Observable Engineer** - Please provide the current abnormal data related to the failure for further analysis.
+2. **NetWork Expert** - Prepare to analyze network-related issues such as network delays.
+3. **Architecture Expert** - Be ready to provide any pertinent system architecture-related insights.
+4. **System Expert** - Prepare to examine system resource-related anomalies or faults, especially those related to CPU.
+
+We'll start with the data. Observable Engineer, please proceed and obtain the current abnormal data.
+--------------------------------------------------------------------------------
+……
+```
+
+## Dataset
+
+We used two datasets. 
+
+D1 is an open source dataset from the well-known medium-sized case system Train ticket. The dataset contains 45 fault instances, and the fault types involve real faults such as system resources, networks, and anomalies.
+D2 is a private dataset. We collected real cloud events and anomaly data from a core system on a large enterprise cloud platform. The details are introduced in our paper. Due to the enterprise's data security requirements, we cannot open source the dataset for the time being.
+
+We organized the D1 dataset, mainly by indexing it by fault, and storing it in the [TrainTicket](/TrainTicket)/fault_* directory. Each folder contains four files, namely **fault.txt**, **log.csv**, **trace.csv,** and **metric.csv.** Among them, fault.txt is the original information of fault injection, and the other three files are the operation and maintenance data before and after the fault injection. 
+
+## Project Structure
+
+```
+.
+│  LICENSE
+│  README.md
+│  .env.example: Api_key configuration file.
+│  config.yaml: Data Source Configuration File.
+│  Agents.py: ChatRCA agents definition.
+│  CSV2md.py: Csv table processing tool.
+│  main.py: ChatRCA main program.
+│  Tooluse.py: Data collection and processing tools for agents.          
+├─TrainTicket
+│  ├─fault_1
+│  │      fault.txt: Fault injection source information.  
+│  │      log.csv: Log information before and after the failure.
+│  │      metric.csv: Metric information before and after the failure
+│  │      trace.csv: Trace information before and after the failure      
+│  ├─fault_2
+│  ├─fault_3
+│  ├─fault_4          
+│  requirements.txt  
+│  .gitignore
+
+
+```
 
