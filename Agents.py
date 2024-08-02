@@ -3,6 +3,8 @@ from autogen import ConversableAgent
 from autogen import GroupChatManager
 from autogen import GroupChat
 from autogen import register_function
+from autogen.agentchat.contrib.retrieve_user_proxy_agent import RetrieveUserProxyAgent
+
 from Tooluse import alldata
 from autogen.coding import LocalCommandLineCodeExecutor
 from dotenv import load_dotenv
@@ -32,6 +34,7 @@ Operator = ConversableAgent(
     code_execution_config={"executor": executor},
     description='An operator is responsible for executing the code of agent skills and interacting with external data sources.Can only be called by Observable_engineer_agent!',
 )
+
 # 用户代理 发布任务，介入人机交互
 User_proxy = UserProxyAgent(
     name='User_proxy_agent',
@@ -174,6 +177,29 @@ Observable_engineer_agent = ConversableAgent(
     description='Observable engineer, Obtain current abnormal data and display it for analysis by operation and maintenance personnel.',
 )
 
+# RAG,可使用私有历史数据测试
+RAG_user_proxy_agent = RetrieveUserProxyAgent(
+    name="RAG_Assistant",
+    human_input_mode="NEVER",
+    max_consecutive_auto_reply=3,
+    retrieve_config={
+        "task": "code",
+        "docs_path": [
+            "private/CMCC_fault_rag"
+        ],
+        "vector_db": "pgvector",
+        "collection_name": "autogen_docs",
+        "db_config": {
+            "connection_string": "postgresql://test:abcd1234@localhost:5432/vectordb",
+        },
+        "custom_text_types": ["mdx"],
+        "chunk_token_size": 2000,
+        "model": "text-embedding-3-small",
+        "get_or_create": True,
+    },
+    code_execution_config=False,
+)
+
 # 赋予数据观测人员调用函数获取数据的能力
 register_function(
     alldata,
@@ -182,6 +208,13 @@ register_function(
     name="data",  # By default, the function name is used as the tool name.
     description="A useful related data tool",  # A description of the tool.
 )
+# Group_chat = GroupChat(
+#     messages=[],
+#     agents=[RAG_user_proxy_agent, Operation_Engineer_Agent, Observable_engineer_agent, Operator,
+#              NetWork_Expert_Agent, Architect_Expert_Agent, System_Expert_Agent],
+#     send_introductions=True,
+#     max_round=20,
+# )
 Group_chat = GroupChat(
     messages=[],
     agents=[User_proxy, Operation_Engineer_Agent, Observable_engineer_agent, Operator,
