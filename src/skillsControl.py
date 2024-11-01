@@ -1,12 +1,12 @@
-from Tooluse import *
+from tooluse import *
 
-def alldata():
+def alldata() -> str:
     return read_md_files_from_directory(get_fault_path())
 
 def partdata(kind):
     return read_md_files_in_data_kind(get_fault_path(), kind)
 
-def architectureData():
+def architectureData() ->str:
     # 读取架构信息 
     filepath = 'architecture.md'
     try:

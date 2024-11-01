@@ -1,7 +1,7 @@
 import re
-from Agents import *
-from Tooluse import *
-from CSV2md import remove_suffix
+from agents import *
+from tooluse import *
+from csv2md import remove_suffix
 
 
 if __name__ == '__main__':

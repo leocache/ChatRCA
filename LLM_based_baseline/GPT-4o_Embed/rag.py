@@ -7,10 +7,10 @@ from langchain_openai import OpenAIEmbeddings
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_openai import ChatOpenAI
 from langchain_community.document_loaders import UnstructuredMarkdownLoader
-from Tooluse import *
+from tooluse import *
 import re
 from dotenv import load_dotenv
-from CSV2md import remove_suffix
+from csv2md import remove_suffix
 
 load_dotenv()
 llm = ChatOpenAI(model="gpt-4o")

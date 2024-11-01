@@ -1,6 +1,6 @@
 import yaml
 import os
-from CSV2md import csv_to_markdown
+from src.csv2md import csv_to_markdown
 import json
 
 def read_md_files_in_data_kind(directory, data_kind):

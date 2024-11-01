@@ -1,6 +1,6 @@
 import yaml
 import os
-from CSV2md import csv_to_markdown
+from csv2md import csv_to_markdown
 import json
 
 

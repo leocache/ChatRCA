@@ -1,6 +1,6 @@
-from Agents import *
-from Tooluse import *
-from CSV2md import remove_suffix
+from src.agents import *
+from tooluse import *
+from src.csv2md import remove_suffix
 
 
 
