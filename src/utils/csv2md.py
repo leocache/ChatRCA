@@ -1,11 +1,9 @@
 import csv
-import re
 
 # 读取CSV文件
 def read_csv(file_name):
     with open(file_name, mode='r', encoding='utf-8') as f:
         return list(csv.reader(f))
-
 
 # 将CSV数据转换为Markdown表格
 def csv_to_markdown(csv_path):
@@ -17,9 +15,4 @@ def csv_to_markdown(csv_path):
     
     return "\n".join([header_line] + separators + markdown_lines[1:])
 
-# 清除倒数第一个“-”及以后的字符
 
-def remove_suffix(text):
-    pattern = r'-[^-]*$'
-    result = re.sub(pattern, '', text)
-    return result
