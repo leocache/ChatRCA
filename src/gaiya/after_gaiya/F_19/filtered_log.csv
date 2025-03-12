@@ -1,0 +1,8 @@
+timestamp,log_level,service_name,trace_id,message
+"2021-07-04 09:01:30,064",WARNING,redisservice1,t2,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 09:01:30,600",ERROR,webservice1,t2,an error occurred in the downstream service
+"2021-07-04 09:01:40,899",ERROR,logservice2,t3,"get information failed, fail code: 400"
+"2021-07-04 09:01:40,909",ERROR,webservice2,t3,an error occurred in the downstream service
+"2021-07-04 09:01:40,892",ERROR,redisservice2,t3,"二维码已过期， 请刷新重新扫描, status_code: 400"
+"2021-07-04 09:01:40,800",ERROR,mobservice2,t3,"uuid:5d9bc794-dc63-11eb-bd7e-0242ac110004 information has expired, mobile phone login is invalid"
+"2021-07-04 09:01:40,800",ERROR,redisservice2,t3,"二维码已过期， 请刷新重新扫描, status_code: 400"

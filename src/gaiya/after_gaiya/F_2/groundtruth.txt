@@ -1,0 +1,13 @@
+Ground Truth Record 2
+Unnamed: 0: 1
+index: 1
+date: 2021-07-04
+service: mobservice
+instance: mobservice2
+message: 2021-07-04 00:48:32,796 | WARNING | 0.0.0.4 | 172.17.0.2 | mobservice2 | [memory_anomalies] trigger a high memory program, start at 2021-07-04 00:38:14.418677 and lasts 600 seconds and use 1g memory
+level: WARNING
+anomaly_type: [memory_anomalies]
+st_time: 2021-07-04 00:38:14.418677
+ed_time: 2021-07-04 00:48:14.418677
+duration: 600
+data_type: train

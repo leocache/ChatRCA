@@ -1,0 +1,13 @@
+Ground Truth Record 34
+Unnamed: 0: 33
+index: 33
+date: 2021-07-04
+service: webservice
+instance: webservice2
+message: 2021-07-04 18:49:17,268 | WARNING | 0.0.0.3 | 172.17.0.4 | webservice2 | [memory_anomalies] trigger a high memory program, start at 2021-07-04 18:39:16.151591 and lasts 600 seconds and use 1g memory
+level: WARNING
+anomaly_type: [memory_anomalies]
+st_time: 2021-07-04 18:39:16.151591
+ed_time: 2021-07-04 18:49:16.151591
+duration: 600
+data_type: train

@@ -1,0 +1,13 @@
+Ground Truth Record 17
+Unnamed: 0: 16
+index: 16
+date: 2021-07-04
+service: dbservice
+instance: dbservice1
+message: 2021-07-04 07:33:33,003 | WARNING | 0.0.0.4 | 172.17.0.3 | dbservice1 | [memory_anomalies] trigger a high memory program, start at 2021-07-04 07:23:31.902981 and lasts 600 seconds and use 1g memory
+level: WARNING
+anomaly_type: [memory_anomalies]
+st_time: 2021-07-04 07:23:31.902981
+ed_time: 2021-07-04 07:33:31.902981
+duration: 600
+data_type: train
