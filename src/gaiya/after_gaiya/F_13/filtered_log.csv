@@ -1,0 +1,4 @@
+timestamp,log_level,service_name,trace_id,message
+"2021-07-04 05:58:16,962",WARNING,redisservice1,t3,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 05:58:17,544",ERROR,dbservice1,t3,"(pymysql.err.OperationalError) (1054, ""Unknown column 'system_data_time' in 'field list'"")[SQL: select service_name, system_data_time, system_cpu_utilization, system_memory_usage,system_disk_usage, disk_io_read_count, disk_io_write_count,system_network, network_io_read_count, network_io_write_count from `metric_table_2021-05`](Background on this error at: http://sqlalche.me/e/14/e3q8)"
+"2021-07-04 05:58:17,559",ERROR,webservice1,t3,an error occurred in the downstream service

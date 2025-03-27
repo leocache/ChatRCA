@@ -1,0 +1,2 @@
+beijing_time,message,parent_id,service_name,span_id,status_code,trace_id
+2021-07-04 15:36:14,request call function 1 redisservice2.set_key_value_into_redis,,redisservice2,s1,200,t1

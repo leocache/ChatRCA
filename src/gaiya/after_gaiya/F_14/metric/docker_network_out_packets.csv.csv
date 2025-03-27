@@ -1,0 +1,4 @@
+Unnamed: 0,date,timestamp,cmdb_id,kpi_name,value,beijing_time
+603684,2021-07-04,1625350006.0,0.0.0.1.redisservice1,docker_network_out_packets,37.56084561944265,2021-07-04 06:06:46
+497224,2021-07-04,1625350006.0,0.0.0.1.webservice1,docker_network_out_packets,24.89528477580431,2021-07-04 06:06:46
+302843,2021-07-04,1625350006.0,0.0.0.1.mobservice1,docker_network_out_packets,14.567485661878983,2021-07-04 06:06:46

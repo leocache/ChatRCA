@@ -1,0 +1,3 @@
+Unnamed: 0,date,timestamp,cmdb_id,kpi_name,value,beijing_time
+497545,2021-07-04,1625382961.0,0.0.0.3.logservice1,docker_network_outbound_packets,7679732.0,2021-07-04 15:16:01
+433422,2021-07-04,1625382961.0,0.0.0.3.webservice2,docker_network_outbound_packets,6898737.0,2021-07-04 15:16:01

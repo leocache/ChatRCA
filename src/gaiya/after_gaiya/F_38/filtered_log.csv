@@ -1,0 +1,5 @@
+timestamp,log_level,service_name,trace_id,message
+"2021-07-04 20:26:06,987",ERROR,redisservice1,t3,"二维码已过期， 请刷新重新扫描, status_code: 400"
+"2021-07-04 20:26:06,995",ERROR,logservice1,t3,"get information failed, fail code: 400"
+"2021-07-04 20:26:06,924",ERROR,mobservice1,t3,"uuid:fae8cce0-dcc2-11eb-8b7c-0242ac110004 information has expired, mobile phone login is invalid"
+"2021-07-04 20:26:06,918",ERROR,redisservice2,t3,"二维码已过期， 请刷新重新扫描, status_code: 400"

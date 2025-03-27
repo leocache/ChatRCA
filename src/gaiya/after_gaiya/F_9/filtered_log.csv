@@ -1,0 +1,9 @@
+timestamp,log_level,service_name,trace_id,message
+"2021-07-04 04:18:07,786",WARNING,redisservice2,t5,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 04:18:08,316",ERROR,dbservice2,t5,"(pymysql.err.OperationalError) (1054, ""Unknown column 'system_data_time' in 'field list'"")[SQL: select service_name, system_data_time, system_cpu_utilization, system_memory_usage,system_disk_usage, disk_io_read_count, disk_io_write_count,system_network, network_io_read_count, network_io_write_count from `metric_table_2021-05`](Background on this error at: http://sqlalche.me/e/14/e3q8)"
+"2021-07-04 04:18:08,338",ERROR,webservice2,t5,an error occurred in the downstream service
+"2021-07-04 04:18:15,136",ERROR,mobservice1,t13,"uuid:c568f432-dc3b-11eb-a372-0242ac110004 information has expired, mobile phone login is invalid"
+"2021-07-04 04:18:15,235",ERROR,webservice2,t13,an error occurred in the downstream service
+"2021-07-04 04:18:15,212",ERROR,redisservice1,t13,"二维码已过期， 请刷新重新扫描, status_code: 400"
+"2021-07-04 04:18:15,230",ERROR,logservice1,t13,"get information failed, fail code: 400"
+"2021-07-04 04:18:15,135",ERROR,redisservice2,t13,"二维码已过期， 请刷新重新扫描, status_code: 400"

@@ -1,0 +1,179 @@
+timestamp,log_level,service_name,trace_id,message
+"2021-07-04 01:34:21,382",WARNING,redisservice2,t7,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 01:34:21,990",ERROR,dbservice2,t7,"(pymysql.err.OperationalError) (1054, ""Unknown column 'system_data_time' in 'field list'"")[SQL: select service_name, system_data_time, system_cpu_utilization, system_memory_usage,system_disk_usage, disk_io_read_count, disk_io_write_count,system_network, network_io_read_count, network_io_write_count from `metric_table_2021-05`](Background on this error at: http://sqlalche.me/e/14/e3q8)"
+"2021-07-04 01:34:22,012",ERROR,webservice1,t7,an error occurred in the downstream service
+"2021-07-04 01:34:31,754",WARNING,redisservice1,t21,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 01:34:32,322",ERROR,webservice2,t21,an error occurred in the downstream service
+"2021-07-04 01:34:35,480",WARNING,redisservice1,t27,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 01:34:36,503",ERROR,webservice2,t27,an error occurred in the downstream service
+"2021-07-04 01:34:58,395",WARNING,redisservice1,t57,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 01:34:59,002",ERROR,dbservice2,t57,"(pymysql.err.OperationalError) (1054, ""Unknown column 'system_data_time' in 'field list'"")[SQL: select service_name, system_data_time, system_cpu_utilization, system_memory_usage,system_disk_usage, disk_io_read_count, disk_io_write_count,system_network, network_io_read_count, network_io_write_count from `metric_table_2021-05`](Background on this error at: http://sqlalche.me/e/14/e3q8)"
+"2021-07-04 01:34:59,023",ERROR,webservice2,t57,an error occurred in the downstream service
+"2021-07-04 01:35:00,523",WARNING,redisservice2,t60,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 01:35:01,106",ERROR,webservice1,t60,an error occurred in the downstream service
+"2021-07-04 01:35:01,076",ERROR,dbservice2,t60,"(pymysql.err.ProgrammingError) (1146, ""Table 'cloudwise_micross.system_metric_datas' doesn't exist"")[SQL: select service_names, system_data_time, system_cpu_utilization, system_memory_usage,system_disk_usage, disk_io_read_count, disk_io_write_count,system_network, network_io_read_count, network_io_write_count from system_metric_datas](Background on this error at: http://sqlalche.me/e/14/f405)"
+"2021-07-04 01:35:10,848",ERROR,webservice2,t73,an error occurred in the downstream service
+"2021-07-04 01:35:10,197",WARNING,redisservice1,t73,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 01:35:10,828",ERROR,dbservice1,t73,"(pymysql.err.ProgrammingError) (1146, ""Table 'cloudwise_micross.system_metric_datas' doesn't exist"")[SQL: select service_names, system_data_time, system_cpu_utilization, system_memory_usage,system_disk_usage, disk_io_read_count, disk_io_write_count,system_network, network_io_read_count, network_io_write_count from system_metric_datas](Background on this error at: http://sqlalche.me/e/14/f405)"
+"2021-07-04 01:35:14,434",WARNING,redisservice2,t79,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 01:35:15,003",ERROR,webservice2,t79,an error occurred in the downstream service
+"2021-07-04 01:35:19,124",WARNING,redisservice1,t86,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 01:35:19,975",ERROR,webservice2,t86,an error occurred in the downstream service
+"2021-07-04 01:35:25,816",ERROR,webservice2,t94,an error occurred in the downstream service
+"2021-07-04 01:35:25,270",WARNING,redisservice1,t94,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 01:35:32,546",WARNING,redisservice1,t104,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 01:35:33,119",ERROR,webservice1,t104,an error occurred in the downstream service
+"2021-07-04 01:35:33,084",ERROR,dbservice2,t104,"(pymysql.err.OperationalError) (1054, ""Unknown column 'system_data_time' in 'field list'"")[SQL: select service_name, system_data_time, system_cpu_utilization, system_memory_usage,system_disk_usage, disk_io_read_count, disk_io_write_count,system_network, network_io_read_count, network_io_write_count from `metric_table_2021-05`](Background on this error at: http://sqlalche.me/e/14/e3q8)"
+"2021-07-04 01:35:36,231",WARNING,redisservice1,t109,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 01:35:37,888",ERROR,webservice1,t109,an error occurred in the downstream service
+"2021-07-04 01:35:37,864",ERROR,dbservice1,t109,"(pymysql.err.OperationalError) (1065, 'Query was empty')(Background on this error at: http://sqlalche.me/e/14/e3q8)"
+"2021-07-04 01:35:39,890",WARNING,redisservice2,t113,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 01:35:40,451",ERROR,dbservice1,t113,"(pymysql.err.OperationalError) (1065, 'Query was empty')(Background on this error at: http://sqlalche.me/e/14/e3q8)"
+"2021-07-04 01:35:40,472",ERROR,webservice1,t113,an error occurred in the downstream service
+"2021-07-04 01:35:45,632",WARNING,redisservice1,t121,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 01:35:46,203",ERROR,dbservice1,t121,"(pymysql.err.ProgrammingError) (1146, ""Table 'cloudwise_micross.system_metric_datas' doesn't exist"")[SQL: select service_names, system_data_time, system_cpu_utilization, system_memory_usage,system_disk_usage, disk_io_read_count, disk_io_write_count,system_network, network_io_read_count, network_io_write_count from system_metric_datas](Background on this error at: http://sqlalche.me/e/14/f405)"
+"2021-07-04 01:35:46,227",ERROR,webservice1,t121,an error occurred in the downstream service
+"2021-07-04 01:36:06,911",WARNING,redisservice2,t150,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 01:36:07,460",ERROR,dbservice1,t150,"(pymysql.err.ProgrammingError) (1146, ""Table 'cloudwise_micross.system_metric_datas' doesn't exist"")[SQL: select service_names, system_data_time, system_cpu_utilization, system_memory_usage,system_disk_usage, disk_io_read_count, disk_io_write_count,system_network, network_io_read_count, network_io_write_count from system_metric_datas](Background on this error at: http://sqlalche.me/e/14/f405)"
+"2021-07-04 01:36:07,483",ERROR,webservice2,t150,an error occurred in the downstream service
+"2021-07-04 01:36:26,523",ERROR,redisservice2,t162,"二维码已过期， 请刷新重新扫描, status_code: 400"
+"2021-07-04 01:36:26,447",ERROR,redisservice2,t162,"二维码已过期， 请刷新重新扫描, status_code: 400"
+"2021-07-04 01:36:26,449",ERROR,mobservice2,t162,"uuid:2a9f40ac-dc25-11eb-99c8-0242ac110003 information has expired, mobile phone login is invalid"
+"2021-07-04 01:36:26,534",ERROR,logservice1,t162,"get information failed, fail code: 400"
+"2021-07-04 01:36:26,545",ERROR,webservice1,t162,an error occurred in the downstream service
+"2021-07-04 01:36:29,676",WARNING,redisservice1,t170,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 01:36:30,233",ERROR,webservice1,t170,an error occurred in the downstream service
+"2021-07-04 01:37:00,691",WARNING,redisservice1,t213,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 01:37:01,355",ERROR,dbservice2,t213,"(pymysql.err.ProgrammingError) (1146, ""Table 'cloudwise_micross.system_metric_datas' doesn't exist"")[SQL: select service_names, system_data_time, system_cpu_utilization, system_memory_usage,system_disk_usage, disk_io_read_count, disk_io_write_count,system_network, network_io_read_count, network_io_write_count from system_metric_datas](Background on this error at: http://sqlalche.me/e/14/f405)"
+"2021-07-04 01:37:01,378",ERROR,webservice1,t213,an error occurred in the downstream service
+"2021-07-04 01:37:22,606",WARNING,redisservice2,t244,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 01:37:23,151",ERROR,webservice1,t244,an error occurred in the downstream service
+"2021-07-04 01:37:29,758",ERROR,webservice2,t253,an error occurred in the downstream service
+"2021-07-04 01:37:29,229",WARNING,redisservice1,t253,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 01:37:29,738",ERROR,dbservice1,t253,"(pymysql.err.OperationalError) (1065, 'Query was empty')(Background on this error at: http://sqlalche.me/e/14/e3q8)"
+"2021-07-04 01:37:34,828",WARNING,redisservice2,t261,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 01:37:35,357",ERROR,dbservice2,t261,"(pymysql.err.OperationalError) (1065, 'Query was empty')(Background on this error at: http://sqlalche.me/e/14/e3q8)"
+"2021-07-04 01:37:35,383",ERROR,webservice1,t261,an error occurred in the downstream service
+"2021-07-04 01:37:46,757",WARNING,redisservice1,t278,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 01:37:47,307",ERROR,webservice1,t278,an error occurred in the downstream service
+"2021-07-04 01:37:47,280",ERROR,dbservice1,t278,"(pymysql.err.ProgrammingError) (1146, ""Table 'cloudwise_micross.system_metric_datas' doesn't exist"")[SQL: select service_names, system_data_time, system_cpu_utilization, system_memory_usage,system_disk_usage, disk_io_read_count, disk_io_write_count,system_network, network_io_read_count, network_io_write_count from system_metric_datas](Background on this error at: http://sqlalche.me/e/14/f405)"
+"2021-07-04 01:37:50,775",WARNING,redisservice1,t285,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 01:37:51,311",ERROR,dbservice1,t285,"(pymysql.err.OperationalError) (1054, ""Unknown column 'system_data_time' in 'field list'"")[SQL: select service_name, system_data_time, system_cpu_utilization, system_memory_usage,system_disk_usage, disk_io_read_count, disk_io_write_count,system_network, network_io_read_count, network_io_write_count from `metric_table_2021-05`](Background on this error at: http://sqlalche.me/e/14/e3q8)"
+"2021-07-04 01:37:51,340",ERROR,webservice1,t285,an error occurred in the downstream service
+"2021-07-04 01:38:05,559",ERROR,logservice2,t289,"get information failed, fail code: 400"
+"2021-07-04 01:38:05,476",ERROR,mobservice2,t289,"uuid:65a286be-dc25-11eb-9d67-0242ac110004 information has expired, mobile phone login is invalid"
+"2021-07-04 01:38:05,318",WARNING,redisservice2,t293,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 01:38:05,563",ERROR,redisservice1,t289,"二维码已过期， 请刷新重新扫描, status_code: 400"
+"2021-07-04 01:38:05,569",ERROR,webservice2,t289,an error occurred in the downstream service
+"2021-07-04 01:38:05,484",ERROR,redisservice1,t289,"二维码已过期， 请刷新重新扫描, status_code: 400"
+"2021-07-04 01:38:06,097",ERROR,dbservice2,t293,"(pymysql.err.OperationalError) (1054, ""Unknown column 'system_data_time' in 'field list'"")[SQL: select service_name, system_data_time, system_cpu_utilization, system_memory_usage,system_disk_usage, disk_io_read_count, disk_io_write_count,system_network, network_io_read_count, network_io_write_count from `metric_table_2021-05`](Background on this error at: http://sqlalche.me/e/14/e3q8)"
+"2021-07-04 01:38:06,118",ERROR,webservice2,t293,an error occurred in the downstream service
+"2021-07-04 01:38:13,419",WARNING,redisservice2,t304,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 01:38:13,952",ERROR,webservice2,t304,an error occurred in the downstream service
+"2021-07-04 01:38:23,563",WARNING,redisservice2,t319,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 01:38:24,245",ERROR,webservice2,t319,an error occurred in the downstream service
+"2021-07-04 01:38:24,124",ERROR,dbservice1,t319,"(pymysql.err.OperationalError) (1054, ""Unknown column 'system_data_time' in 'field list'"")[SQL: select service_name, system_data_time, system_cpu_utilization, system_memory_usage,system_disk_usage, disk_io_read_count, disk_io_write_count,system_network, network_io_read_count, network_io_write_count from `metric_table_2021-05`](Background on this error at: http://sqlalche.me/e/14/e3q8)"
+"2021-07-04 01:38:45,637",ERROR,dbservice2,t349,"(pymysql.err.ProgrammingError) (1146, ""Table 'cloudwise_micross.system_metric_datas' doesn't exist"")[SQL: select service_names, system_data_time, system_cpu_utilization, system_memory_usage,system_disk_usage, disk_io_read_count, disk_io_write_count,system_network, network_io_read_count, network_io_write_count from system_metric_datas](Background on this error at: http://sqlalche.me/e/14/f405)"
+"2021-07-04 01:38:45,073",WARNING,redisservice2,t349,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 01:38:45,662",ERROR,webservice1,t349,an error occurred in the downstream service
+"2021-07-04 01:38:56,662",ERROR,dbservice2,t364,"(pymysql.err.OperationalError) (1054, ""Unknown column 'system_data_time' in 'field list'"")[SQL: select service_name, system_data_time, system_cpu_utilization, system_memory_usage,system_disk_usage, disk_io_read_count, disk_io_write_count,system_network, network_io_read_count, network_io_write_count from `metric_table_2021-05`](Background on this error at: http://sqlalche.me/e/14/e3q8)"
+"2021-07-04 01:38:56,692",ERROR,webservice2,t365,an error occurred in the downstream service
+"2021-07-04 01:38:56,692",ERROR,webservice1,t364,an error occurred in the downstream service
+"2021-07-04 01:38:56,028",WARNING,redisservice1,t364,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 01:38:56,071",WARNING,redisservice2,t365,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 01:39:07,775",WARNING,redisservice2,t381,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 01:39:08,349",ERROR,webservice1,t381,an error occurred in the downstream service
+"2021-07-04 01:39:24,199",ERROR,redisservice2,t389,"二维码已过期， 请刷新重新扫描, status_code: 400"
+"2021-07-04 01:39:24,205",ERROR,logservice2,t389,"get information failed, fail code: 400"
+"2021-07-04 01:39:24,092",ERROR,mobservice1,t389,"uuid:94772b02-dc25-11eb-a1f7-0242ac110003 information has expired, mobile phone login is invalid"
+"2021-07-04 01:39:24,221",ERROR,webservice1,t389,an error occurred in the downstream service
+"2021-07-04 01:39:24,087",ERROR,redisservice1,t389,"二维码已过期， 请刷新重新扫描, status_code: 400"
+"2021-07-04 01:39:34,596",ERROR,dbservice2,t406,"(pymysql.err.OperationalError) (1065, 'Query was empty')(Background on this error at: http://sqlalche.me/e/14/e3q8)"
+"2021-07-04 01:39:34,073",WARNING,redisservice1,t406,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 01:39:34,620",ERROR,webservice1,t406,an error occurred in the downstream service
+"2021-07-04 01:39:47,036",ERROR,mobservice1,t409,"uuid:a2273a62-dc25-11eb-91e1-0242ac110003 information has expired, mobile phone login is invalid"
+"2021-07-04 01:39:47,103",ERROR,logservice1,t409,"get information failed, fail code: 400"
+"2021-07-04 01:39:47,104",ERROR,redisservice1,t409,"二维码已过期， 请刷新重新扫描, status_code: 400"
+"2021-07-04 01:39:47,114",ERROR,webservice1,t409,an error occurred in the downstream service
+"2021-07-04 01:39:47,030",ERROR,redisservice1,t409,"二维码已过期， 请刷新重新扫描, status_code: 400"
+"2021-07-04 01:40:01,472",WARNING,redisservice2,t434,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 01:40:02,109",ERROR,webservice2,t434,an error occurred in the downstream service
+"2021-07-04 01:40:02,090",ERROR,dbservice2,t434,"(pymysql.err.ProgrammingError) (1146, ""Table 'cloudwise_micross.system_metric_datas' doesn't exist"")[SQL: select service_names, system_data_time, system_cpu_utilization, system_memory_usage,system_disk_usage, disk_io_read_count, disk_io_write_count,system_network, network_io_read_count, network_io_write_count from system_metric_datas](Background on this error at: http://sqlalche.me/e/14/f405)"
+"2021-07-04 01:40:12,749",ERROR,dbservice1,t449,"(pymysql.err.OperationalError) (1065, 'Query was empty')(Background on this error at: http://sqlalche.me/e/14/e3q8)"
+"2021-07-04 01:40:12,766",ERROR,webservice2,t449,an error occurred in the downstream service
+"2021-07-04 01:40:12,009",WARNING,redisservice1,t449,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 01:40:19,132",WARNING,redisservice2,t459,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 01:40:19,733",ERROR,webservice1,t459,an error occurred in the downstream service
+"2021-07-04 01:40:19,707",ERROR,dbservice2,t459,"(pymysql.err.ProgrammingError) (1146, ""Table 'cloudwise_micross.system_metric_datas' doesn't exist"")[SQL: select service_names, system_data_time, system_cpu_utilization, system_memory_usage,system_disk_usage, disk_io_read_count, disk_io_write_count,system_network, network_io_read_count, network_io_write_count from system_metric_datas](Background on this error at: http://sqlalche.me/e/14/f405)"
+"2021-07-04 01:40:30,336",WARNING,redisservice2,t475,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 01:40:30,943",ERROR,webservice1,t475,an error occurred in the downstream service
+"2021-07-04 01:40:30,910",ERROR,dbservice2,t475,"(pymysql.err.ProgrammingError) (1146, ""Table 'cloudwise_micross.system_metric_datas' doesn't exist"")[SQL: select service_names, system_data_time, system_cpu_utilization, system_memory_usage,system_disk_usage, disk_io_read_count, disk_io_write_count,system_network, network_io_read_count, network_io_write_count from system_metric_datas](Background on this error at: http://sqlalche.me/e/14/f405)"
+"2021-07-04 01:40:45,130",WARNING,redisservice2,t489,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 01:40:45,749",ERROR,dbservice1,t489,"(pymysql.err.OperationalError) (1065, 'Query was empty')(Background on this error at: http://sqlalche.me/e/14/e3q8)"
+"2021-07-04 01:40:45,775",ERROR,webservice1,t489,an error occurred in the downstream service
+"2021-07-04 01:40:49,632",WARNING,redisservice1,t495,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 01:40:50,157",ERROR,dbservice2,t495,"(pymysql.err.OperationalError) (1065, 'Query was empty')(Background on this error at: http://sqlalche.me/e/14/e3q8)"
+"2021-07-04 01:40:50,188",ERROR,webservice1,t495,an error occurred in the downstream service
+"2021-07-04 01:40:58,746",ERROR,dbservice2,t506,"(pymysql.err.OperationalError) (1054, ""Unknown column 'system_data_time' in 'field list'"")[SQL: select service_name, system_data_time, system_cpu_utilization, system_memory_usage,system_disk_usage, disk_io_read_count, disk_io_write_count,system_network, network_io_read_count, network_io_write_count from `metric_table_2021-05`](Background on this error at: http://sqlalche.me/e/14/e3q8)"
+"2021-07-04 01:40:58,778",ERROR,webservice1,t506,an error occurred in the downstream service
+"2021-07-04 01:40:58,131",WARNING,redisservice2,t506,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 01:41:01,465",WARNING,redisservice2,t510,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 01:41:02,038",ERROR,webservice2,t510,an error occurred in the downstream service
+"2021-07-04 01:41:14,379",WARNING,redisservice1,t527,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 01:41:14,930",ERROR,dbservice2,t527,"(pymysql.err.OperationalError) (1054, ""Unknown column 'system_data_time' in 'field list'"")[SQL: select service_name, system_data_time, system_cpu_utilization, system_memory_usage,system_disk_usage, disk_io_read_count, disk_io_write_count,system_network, network_io_read_count, network_io_write_count from `metric_table_2021-05`](Background on this error at: http://sqlalche.me/e/14/e3q8)"
+"2021-07-04 01:41:14,960",ERROR,webservice1,t527,an error occurred in the downstream service
+"2021-07-04 01:41:17,634",WARNING,redisservice1,t532,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 01:41:18,205",ERROR,webservice1,t532,an error occurred in the downstream service
+"2021-07-04 01:41:18,172",ERROR,dbservice1,t532,"(pymysql.err.ProgrammingError) (1146, ""Table 'cloudwise_micross.system_metric_datas' doesn't exist"")[SQL: select service_names, system_data_time, system_cpu_utilization, system_memory_usage,system_disk_usage, disk_io_read_count, disk_io_write_count,system_network, network_io_read_count, network_io_write_count from system_metric_datas](Background on this error at: http://sqlalche.me/e/14/f405)"
+"2021-07-04 01:41:43,848",ERROR,dbservice1,t568,"(pymysql.err.OperationalError) (1065, 'Query was empty')(Background on this error at: http://sqlalche.me/e/14/e3q8)"
+"2021-07-04 01:41:43,293",WARNING,redisservice2,t568,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 01:41:43,880",ERROR,webservice1,t568,an error occurred in the downstream service
+"2021-07-04 01:41:50,933",WARNING,redisservice1,t579,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 01:41:51,471",ERROR,dbservice2,t579,"(pymysql.err.OperationalError) (1065, 'Query was empty')(Background on this error at: http://sqlalche.me/e/14/e3q8)"
+"2021-07-04 01:41:51,499",ERROR,webservice1,t579,an error occurred in the downstream service
+"2021-07-04 01:42:00,916",ERROR,webservice1,t592,an error occurred in the downstream service
+"2021-07-04 01:42:00,338",WARNING,redisservice1,t592,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 01:42:00,889",ERROR,dbservice2,t592,"(pymysql.err.ProgrammingError) (1146, ""Table 'cloudwise_micross.system_metric_datas' doesn't exist"")[SQL: select service_names, system_data_time, system_cpu_utilization, system_memory_usage,system_disk_usage, disk_io_read_count, disk_io_write_count,system_network, network_io_read_count, network_io_write_count from system_metric_datas](Background on this error at: http://sqlalche.me/e/14/f405)"
+"2021-07-04 01:42:04,962",WARNING,redisservice1,t598,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 01:42:05,522",ERROR,webservice1,t598,an error occurred in the downstream service
+"2021-07-04 01:42:05,496",ERROR,dbservice1,t598,"(pymysql.err.ProgrammingError) (1146, ""Table 'cloudwise_micross.system_metric_datas' doesn't exist"")[SQL: select service_names, system_data_time, system_cpu_utilization, system_memory_usage,system_disk_usage, disk_io_read_count, disk_io_write_count,system_network, network_io_read_count, network_io_write_count from system_metric_datas](Background on this error at: http://sqlalche.me/e/14/f405)"
+"2021-07-04 01:42:08,814",WARNING,redisservice2,t604,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 01:42:09,407",ERROR,dbservice2,t604,"(pymysql.err.OperationalError) (1065, 'Query was empty')(Background on this error at: http://sqlalche.me/e/14/e3q8)"
+"2021-07-04 01:42:09,427",ERROR,webservice2,t604,an error occurred in the downstream service
+"2021-07-04 01:42:21,955",ERROR,webservice1,t621,an error occurred in the downstream service
+"2021-07-04 01:42:21,932",ERROR,dbservice2,t621,"(pymysql.err.ProgrammingError) (1146, ""Table 'cloudwise_micross.system_metric_datas' doesn't exist"")[SQL: select service_names, system_data_time, system_cpu_utilization, system_memory_usage,system_disk_usage, disk_io_read_count, disk_io_write_count,system_network, network_io_read_count, network_io_write_count from system_metric_datas](Background on this error at: http://sqlalche.me/e/14/f405)"
+"2021-07-04 01:42:21,349",WARNING,redisservice1,t621,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 01:42:28,986",WARNING,redisservice2,t632,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 01:42:29,609",ERROR,webservice2,t632,an error occurred in the downstream service
+"2021-07-04 01:42:29,593",ERROR,dbservice1,t632,"(pymysql.err.OperationalError) (1054, ""Unknown column 'system_data_time' in 'field list'"")[SQL: select service_name, system_data_time, system_cpu_utilization, system_memory_usage,system_disk_usage, disk_io_read_count, disk_io_write_count,system_network, network_io_read_count, network_io_write_count from `metric_table_2021-05`](Background on this error at: http://sqlalche.me/e/14/e3q8)"
+"2021-07-04 01:42:46,731",ERROR,dbservice1,t656,"(pymysql.err.ProgrammingError) (1146, ""Table 'cloudwise_micross.system_metric_datas' doesn't exist"")[SQL: select service_names, system_data_time, system_cpu_utilization, system_memory_usage,system_disk_usage, disk_io_read_count, disk_io_write_count,system_network, network_io_read_count, network_io_write_count from system_metric_datas](Background on this error at: http://sqlalche.me/e/14/f405)"
+"2021-07-04 01:42:46,202",WARNING,redisservice2,t656,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 01:42:46,758",ERROR,webservice1,t656,an error occurred in the downstream service
+"2021-07-04 01:43:16,779",ERROR,webservice2,t697,an error occurred in the downstream service
+"2021-07-04 01:43:16,139",WARNING,redisservice1,t697,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 01:43:19,941",WARNING,redisservice2,t702,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 01:43:20,606",ERROR,dbservice2,t702,"(pymysql.err.OperationalError) (1054, ""Unknown column 'system_data_time' in 'field list'"")[SQL: select service_name, system_data_time, system_cpu_utilization, system_memory_usage,system_disk_usage, disk_io_read_count, disk_io_write_count,system_network, network_io_read_count, network_io_write_count from `metric_table_2021-05`](Background on this error at: http://sqlalche.me/e/14/e3q8)"
+"2021-07-04 01:43:20,628",ERROR,webservice2,t702,an error occurred in the downstream service
+"2021-07-04 01:43:21,723",WARNING,redisservice2,t703,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 01:43:22,268",ERROR,webservice2,t703,an error occurred in the downstream service
+"2021-07-04 01:43:33,906",ERROR,mobservice1,t706,"uuid:295fc21a-dc26-11eb-9b68-0242ac110004 information has expired, mobile phone login is invalid"
+"2021-07-04 01:43:33,985",ERROR,redisservice1,t706,"二维码已过期， 请刷新重新扫描, status_code: 400"
+"2021-07-04 01:43:33,901",ERROR,redisservice1,t706,"二维码已过期， 请刷新重新扫描, status_code: 400"
+"2021-07-04 01:43:33,984",ERROR,logservice1,t706,"get information failed, fail code: 400"
+"2021-07-04 01:43:33,990",ERROR,webservice2,t706,an error occurred in the downstream service
+"2021-07-04 01:43:40,644",WARNING,redisservice1,t720,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 01:43:41,243",ERROR,dbservice2,t720,"(pymysql.err.OperationalError) (1065, 'Query was empty')(Background on this error at: http://sqlalche.me/e/14/e3q8)"
+"2021-07-04 01:43:41,263",ERROR,webservice2,t720,an error occurred in the downstream service
+"2021-07-04 01:43:42,437",WARNING,redisservice2,t722,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 01:43:43,086",ERROR,webservice1,t722,an error occurred in the downstream service
+"2021-07-04 01:44:00,408",WARNING,redisservice1,t748,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 01:44:00,996",ERROR,dbservice2,t748,"(pymysql.err.OperationalError) (1054, ""Unknown column 'system_data_time' in 'field list'"")[SQL: select service_name, system_data_time, system_cpu_utilization, system_memory_usage,system_disk_usage, disk_io_read_count, disk_io_write_count,system_network, network_io_read_count, network_io_write_count from `metric_table_2021-05`](Background on this error at: http://sqlalche.me/e/14/e3q8)"
+"2021-07-04 01:44:01,020",ERROR,webservice1,t748,an error occurred in the downstream service
+"2021-07-04 01:44:06,861",WARNING,redisservice2,t757,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 01:44:07,780",WARNING,redisservice2,t758,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 01:44:07,418",ERROR,webservice2,t757,an error occurred in the downstream service
+"2021-07-04 01:44:08,328",ERROR,dbservice2,t758,"(pymysql.err.OperationalError) (1065, 'Query was empty')(Background on this error at: http://sqlalche.me/e/14/e3q8)"
+"2021-07-04 01:44:08,355",ERROR,webservice1,t758,an error occurred in the downstream service
+"2021-07-04 01:44:11,619",WARNING,redisservice1,t764,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 01:44:12,183",ERROR,webservice1,t764,an error occurred in the downstream service
+"2021-07-04 01:44:12,163",ERROR,dbservice2,t764,"(pymysql.err.OperationalError) (1065, 'Query was empty')(Background on this error at: http://sqlalche.me/e/14/e3q8)"

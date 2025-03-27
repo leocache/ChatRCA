@@ -1,0 +1,6 @@
+beijing_time,message,parent_id,service_name,span_id,status_code,trace_id
+2021-07-04 09:20:16,request call function 1 redisservice1.set_key_value_into_redis,,redisservice1,s1,200,t1
+2021-07-04 09:20:16,request call function 1 webservice1.web_login_service,,webservice1,s2,200,t2
+2021-07-04 09:20:16,request call function 1 logservice1.login_query_redis_info,s2,logservice1,s3,200,t2
+2021-07-04 09:20:16,request call function 1 logservice2.login_model_implement,s3,logservice2,s4,200,t2
+2021-07-04 09:20:16,request call function 1 dbservice2.db_login_methods,s4,dbservice2,s5,200,t2

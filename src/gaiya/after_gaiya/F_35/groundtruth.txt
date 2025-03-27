@@ -1,0 +1,13 @@
+Ground Truth Record 35
+Unnamed: 0: 34
+index: 34
+date: 2021-07-04
+service: logservice
+instance: logservice2
+message: 2021-07-04 19:05:18,512 | WARNING | 0.0.0.2 | 172.17.0.3 | logservice2 | [memory_anomalies] trigger a high memory program, start at 2021-07-04 18:55:17.664885 and lasts 600 seconds and use 1g memory
+level: WARNING
+anomaly_type: [memory_anomalies]
+st_time: 2021-07-04 18:55:17.664885
+ed_time: 2021-07-04 19:05:17.664885
+duration: 600
+data_type: train

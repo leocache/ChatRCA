@@ -1,0 +1,3 @@
+timestamp,log_level,service_name,trace_id,message
+"2021-07-04 19:47:50,113",WARNING,redisservice1,t1,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 19:47:50,695",ERROR,webservice1,t1,an error occurred in the downstream service
