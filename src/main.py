@@ -1,5 +1,5 @@
 from agents import *
-from utils import get_fault_info
+from utils import get_fault_info, get_fault_type_census
 import re
 
 def remove_suffix(text):
@@ -34,4 +34,5 @@ def run_gaiya_fault():
 
 if __name__ == '__main__':
     # run_TrainTicket_fault()
-    run_gaiya_fault()
+    # run_gaiya_fault()
+    get_fault_type_census("gaiya", 'groundtruth.txt', 'txt', "anomaly_type")
