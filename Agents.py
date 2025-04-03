@@ -5,7 +5,7 @@ from autogen import GroupChat
 from autogen import register_function
 from autogen.agentchat.contrib.retrieve_user_proxy_agent import RetrieveUserProxyAgent
 
-from utils.skills4gy import *
+from utils.skills4tt import *
 from autogen.coding import LocalCommandLineCodeExecutor
 from dotenv import load_dotenv
 from autogen import ConversableAgent
@@ -17,7 +17,7 @@ import tempfile
 
 load_dotenv()
 #, "base_url": os.environ.get("OPENAI_API_BASE")
-config_list = {"config_list": [{"model": "gpt-4o-2024-05-13", "api_key": os.environ.get("OPENAI_API_KEY"), "timeout": 100, "cache_seed": None}]}
+config_list = {"config_list": [{"model": "gpt-4o", "api_key": os.environ.get("OPENAI_API_KEY"), "timeout": 100, "cache_seed": None}]}
 
 temp_dir = tempfile.TemporaryDirectory()
 
@@ -60,8 +60,7 @@ Operation_Engineer_Agent = ConversableAgent(
                     You need to respond with a root cause analysis report for the current incident, which should include the incident number, the roles of the experts involved, the expert analysis summary, and the final root cause.
                     #############
                     #SKILLS#
-                    None    
-                    * notice: your skill function is not have to send the params.
+                    None        
                     """,
     description="Operation Engineer, responsible for referring to other experts' analysis and determining the root cause."
 )
@@ -175,33 +174,32 @@ Observable_engineer_agent = ConversableAgent(
                       - Metric data: During cloud failures, analyze historical metrics, retain data items within the event timeframe, and remove irrelevant metrics.
                       - Log data: Quickly extract logs related to the failure within a specific period, and filter further by service type or other conditions.
                       - Trajectory data: Extract data matching the failure timestamp, remove unrelated records, and simplify timestamps for consistency.
-                    * notice: your skill function is not have to send the params.
                     """,
     description='Observable engineer, Obtain current abnormal data and display it for analysis by operation and maintenance personnel.',
 )
 
 # RAG,可使用私有历史数据测试
-# RAG_user_proxy_agent = RetrieveUserProxyAgent(
-#     name="RAG_Assistant",
-#     human_input_mode="NEVER",
-#     max_consecutive_auto_reply=3,
-#     retrieve_config={
-#         "task": "code",
-#         "docs_path": [
-#             "private/CMCC_fault_rag"
-#         ],
-#         "vector_db": "pgvector",
-#         "collection_name": "autogen_docs",
-#         "db_config": {
-#             "connection_string": "postgresql://test:abcd1234@localhost:5432/vectordb",
-#         },
-#         "custom_text_types": ["mdx"],
-#         "chunk_token_size": 2000,
-#         "model": "text-embedding-3-small",
-#         "get_or_create": True,
-#     },
-#     code_execution_config=False,
-# )
+RAG_user_proxy_agent = RetrieveUserProxyAgent(
+    name="RAG_Assistant",
+    human_input_mode="NEVER",
+    max_consecutive_auto_reply=3,
+    retrieve_config={
+        "task": "code",
+        "docs_path": [
+            "private/CMCC_fault_rag"
+        ],
+        "vector_db": "pgvector",
+        "collection_name": "autogen_docs",
+        "db_config": {
+            "connection_string": "postgresql://test:abcd1234@localhost:5432/vectordb",
+        },
+        "custom_text_types": ["mdx"],
+        "chunk_token_size": 2000,
+        "model": "text-embedding-3-small",
+        "get_or_create": True,
+    },
+    code_execution_config=False,
+)
 
 # Observable_engineer_agent's skills
 # 获取数据的能力
@@ -217,7 +215,7 @@ register_function(
     architectureData,
     caller=Observable_engineer_agent,  # The assistant agent can suggest calls to the calculator.
     executor=Operator,  # The user proxy agent can execute the calculator calls.
-    name="architecture_information",  # By default, the function name is used as the tool name.
+    name="architecture information",  # By default, the function name is used as the tool name.
     description="A useful tool for obtaining architecture information",  # A description of the tool.
 )
 
@@ -226,24 +224,24 @@ register_function(
     process_log_data,
     caller=Observable_engineer_agent,  # The assistant agent can suggest calls to the calculator.
     executor=Operator,  # The user proxy agent can execute the calculator calls.
-    name="log_data_processing",  # By default, the function name is used as the tool name.
+    name="log data processing",  # By default, the function name is used as the tool name.
     description="A useful tool for processing log data",  # A description of the tool.
 )
 register_function(
     process_metric_data,
     caller=Observable_engineer_agent,  # The assistant agent can suggest calls to the calculator.
     executor=Operator,  # The user proxy agent can execute the calculator calls.
-    name="metric_data_processing",  # By default, the function name is used as the tool name.
+    name="metric data processing",  # By default, the function name is used as the tool name.
     description="A useful tool for processing metric data",  # A description of the tool.
 )
 register_function(
     process_trace_data,
     caller=Observable_engineer_agent,  # The assistant agent can suggest calls to the calculator.
     executor=Operator,  # The user proxy agent can execute the calculator calls.
-    name="trace_data_processing",  # By default, the function name is used as the tool name.
+    name="trace data processing",  # By default, the function name is used as the tool name.
     description="A useful tool for processing trace data",  # A description of the tool.
 )
-
+# 处理数据能力
 
 # Group_chat = GroupChat(
 #     messages=[],
