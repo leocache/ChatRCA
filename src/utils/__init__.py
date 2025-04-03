@@ -3,6 +3,8 @@ from utils.read_file import *
 from utils.skills4tt import *
 import os
 
+def metric():
+    return process_metric_data()
 def get_fault_info(dataset, des_filename, des_kind):
     # 获取fault_x数据所在目录
     fault_path = get_fault_path(dataset)

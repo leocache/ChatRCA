@@ -1,0 +1,5 @@
+Unnamed: 0,date,timestamp,cmdb_id,kpi_name,value,beijing_time
+4054,2021-07-04,1625383165.0,0.0.0.3.webservice2,docker_cpu_core_8_ticks,235839286712347.0,2021-07-04 15:19:25
+194508,2021-07-04,1625383165.0,0.0.0.3.logservice1,docker_cpu_core_8_ticks,30394984.0,2021-07-04 15:19:25
+230070,2021-07-04,1625383171.0,0.0.0.4.mobservice2,docker_cpu_core_8_ticks,0.0,2021-07-04 15:19:31
+687521,2021-07-04,1625383171.0,0.0.0.4.dbservice1,docker_cpu_core_8_ticks,0.0,2021-07-04 15:19:31

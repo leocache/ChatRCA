@@ -47,6 +47,15 @@ def read_md_files_in_name(directory, filename):
 #     md_content += read_md_files_in_name(directory, 'metric.csv')
 #     return md_content.strip()   # 移除末尾多余的空行
 
+def get_architecture_path():
+    dir_name = 'architecture'
+    # 获取当前脚本所在的目录路径: src/utils/
+    current_dir = os.path.dirname(__file__)
+   
+    # 获取架构文件根目录路径: /src/architecture/
+    root_path = os.path.join(os.path.dirname(current_dir), dir_name)
+    return root_path
+
 def read_md_files_from_directory(directory, kind = 'csv'):
     """
     读取指定目录下所有`.kind`文件的内容，并将它们作为一个长字符串返回。
@@ -114,7 +123,7 @@ def read_fault_description(directory, filename, kind):
     将指定的文本文件按kind格式解析并返回
 
     json用于D1:TranTicket数据集
-    yaml用于D2:gaiya数据集
+    yaml用于D2:GAIA数据集
 
     参数:
     directory (str): 文件所在的目录

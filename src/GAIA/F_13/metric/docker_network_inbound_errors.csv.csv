@@ -1,0 +1,4 @@
+Unnamed: 0,date,timestamp,cmdb_id,kpi_name,value,beijing_time
+246064,2021-07-04,1625349496.0,0.0.0.1.mobservice1,docker_network_inbound_errors,0.0,2021-07-04 05:58:16
+688188,2021-07-04,1625349496.0,0.0.0.1.redisservice1,docker_network_inbound_errors,0.0,2021-07-04 05:58:16
+614149,2021-07-04,1625349496.0,0.0.0.1.webservice1,docker_network_inbound_errors,0.0,2021-07-04 05:58:16

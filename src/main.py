@@ -19,8 +19,8 @@ def run_TrainTicket_fault():
         message="The current cloud system experienced a failure at " + fault_time + ". The current " + fault_pod + " service is affected. Please analyze the root cause.",
     )
 
-def run_gaiya_fault(): 
-    gy_info = get_fault_info("gaiya", 'groundtruth.txt', 'txt')
+def run_GAIA_fault(): 
+    gy_info = get_fault_info("GAIA", 'groundtruth.txt', 'txt')
     gy_desc = gy_info["fault_description"]
     fault_date = gy_desc["date"]
     fault_service = gy_desc["service"]
@@ -34,5 +34,5 @@ def run_gaiya_fault():
 
 if __name__ == '__main__':
     # run_TrainTicket_fault()
-    # run_gaiya_fault()
-    get_fault_type_census("gaiya", 'groundtruth.txt', 'txt', "anomaly_type")
+    run_GAIA_fault()
+    # get_fault_type_census("GAIA", 'groundtruth.txt', 'txt', "anomaly_type")

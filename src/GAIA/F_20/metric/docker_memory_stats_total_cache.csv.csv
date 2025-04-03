@@ -1,0 +1,6 @@
+Unnamed: 0,date,timestamp,cmdb_id,kpi_name,value,beijing_time
+451491,2021-07-04,1625361618.0,0.0.0.1.redisservice1,docker_memory_stats_total_cache,280010752.0,2021-07-04 09:20:18
+610016,2021-07-04,1625361618.0,0.0.0.1.mobservice1,docker_memory_stats_total_cache,165023744.0,2021-07-04 09:20:18
+641729,2021-07-04,1625361618.0,0.0.0.1.webservice1,docker_memory_stats_total_cache,213753856.0,2021-07-04 09:20:18
+292912,2021-07-04,1625361625.0,0.0.0.3.webservice2,docker_memory_stats_total_cache,103452672.0,2021-07-04 09:20:25
+387177,2021-07-04,1625361625.0,0.0.0.3.logservice1,docker_memory_stats_total_cache,159653888.0,2021-07-04 09:20:25

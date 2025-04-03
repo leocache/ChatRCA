@@ -60,7 +60,8 @@ Operation_Engineer_Agent = ConversableAgent(
                     You need to respond with a root cause analysis report for the current incident, which should include the incident number, the roles of the experts involved, the expert analysis summary, and the final root cause.
                     #############
                     #SKILLS#
-                    None        
+                    None    
+                    * notice: your skill function is not have to send the params.
                     """,
     description="Operation Engineer, responsible for referring to other experts' analysis and determining the root cause."
 )
@@ -174,6 +175,7 @@ Observable_engineer_agent = ConversableAgent(
                       - Metric data: During cloud failures, analyze historical metrics, retain data items within the event timeframe, and remove irrelevant metrics.
                       - Log data: Quickly extract logs related to the failure within a specific period, and filter further by service type or other conditions.
                       - Trajectory data: Extract data matching the failure timestamp, remove unrelated records, and simplify timestamps for consistency.
+                    * notice: your skill function is not have to send the params.
                     """,
     description='Observable engineer, Obtain current abnormal data and display it for analysis by operation and maintenance personnel.',
 )
@@ -210,37 +212,37 @@ register_function(
     name="data",  # By default, the function name is used as the tool name.
     description="A useful related data tool",  # A description of the tool.
 )
-# # 获取架构信息能力
-# register_function(
-#     architectureData,
-#     caller=Observable_engineer_agent,  # The assistant agent can suggest calls to the calculator.
-#     executor=Operator,  # The user proxy agent can execute the calculator calls.
-#     name="architecture_information",  # By default, the function name is used as the tool name.
-#     description="A useful tool for obtaining architecture information",  # A description of the tool.
-# )
+# 获取架构信息能力
+register_function(
+    architectureData,
+    caller=Observable_engineer_agent,  # The assistant agent can suggest calls to the calculator.
+    executor=Operator,  # The user proxy agent can execute the calculator calls.
+    name="architecture_information",  # By default, the function name is used as the tool name.
+    description="A useful tool for obtaining architecture information",  # A description of the tool.
+)
 
-# # 处理数据能力
-# register_function(
-#     process_log_data,
-#     caller=Observable_engineer_agent,  # The assistant agent can suggest calls to the calculator.
-#     executor=Operator,  # The user proxy agent can execute the calculator calls.
-#     name="log_data_processing",  # By default, the function name is used as the tool name.
-#     description="A useful tool for processing log data",  # A description of the tool.
-# )
-# register_function(
-#     process_metric_data,
-#     caller=Observable_engineer_agent,  # The assistant agent can suggest calls to the calculator.
-#     executor=Operator,  # The user proxy agent can execute the calculator calls.
-#     name="metric_data_processing",  # By default, the function name is used as the tool name.
-#     description="A useful tool for processing metric data",  # A description of the tool.
-# )
-# register_function(
-#     process_trace_data,
-#     caller=Observable_engineer_agent,  # The assistant agent can suggest calls to the calculator.
-#     executor=Operator,  # The user proxy agent can execute the calculator calls.
-#     name="trace_data_processing",  # By default, the function name is used as the tool name.
-#     description="A useful tool for processing trace data",  # A description of the tool.
-# )
+# 处理数据能力
+register_function(
+    process_log_data,
+    caller=Observable_engineer_agent,  # The assistant agent can suggest calls to the calculator.
+    executor=Operator,  # The user proxy agent can execute the calculator calls.
+    name="log_data_processing",  # By default, the function name is used as the tool name.
+    description="A useful tool for processing log data",  # A description of the tool.
+)
+register_function(
+    process_metric_data,
+    caller=Observable_engineer_agent,  # The assistant agent can suggest calls to the calculator.
+    executor=Operator,  # The user proxy agent can execute the calculator calls.
+    name="metric_data_processing",  # By default, the function name is used as the tool name.
+    description="A useful tool for processing metric data",  # A description of the tool.
+)
+register_function(
+    process_trace_data,
+    caller=Observable_engineer_agent,  # The assistant agent can suggest calls to the calculator.
+    executor=Operator,  # The user proxy agent can execute the calculator calls.
+    name="trace_data_processing",  # By default, the function name is used as the tool name.
+    description="A useful tool for processing trace data",  # A description of the tool.
+)
 
 
 # Group_chat = GroupChat(

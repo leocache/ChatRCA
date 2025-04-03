@@ -1,0 +1,6 @@
+Unnamed: 0,date,timestamp,cmdb_id,kpi_name,value,beijing_time
+718057,2021-07-04,1625349490.0,0.0.0.4.mobservice2,docker_diskio_read_bytes,635703296.0,2021-07-04 05:58:10
+185887,2021-07-04,1625349490.0,0.0.0.4.dbservice1,docker_diskio_read_bytes,545091584.0,2021-07-04 05:58:10
+261626,2021-07-04,1625349499.0,0.0.0.1.redisservice1,docker_diskio_read_bytes,2043904.0,2021-07-04 05:58:19
+78655,2021-07-04,1625349499.0,0.0.0.1.mobservice1,docker_diskio_read_bytes,24576.0,2021-07-04 05:58:19
+557110,2021-07-04,1625349499.0,0.0.0.1.webservice1,docker_diskio_read_bytes,974848.0,2021-07-04 05:58:19

@@ -8,6 +8,9 @@ def read_csv(file_name):
 # 将CSV数据转换为Markdown表格
 def csv_to_markdown(csv_path):
     csv_data = read_csv(csv_path)
+    # 如果csv只有一行，说明没有数据
+    if len(csv_data) == 1:
+        return ""
     markdown_lines = ["| " + " | ".join(row) + " |" for row in csv_data]
     header_line = markdown_lines[0]
     # 修正这里，确定列数以生成分隔行
