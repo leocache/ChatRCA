@@ -10,7 +10,7 @@ from sklearn.model_selection import train_test_split
 
 
 class RCASystem:
-    def __init__(self, base_dir='./TrainTicket', alpha=0.3, k=5):
+    def __init__(self, base_dir='./TrainTicket', alpha=0.3, k=5, model_path=None):
         """
         Initialize the RCA system
 
@@ -18,13 +18,22 @@ class RCASystem:
             base_dir: Directory containing fault folders (default: './TrainTicket')
             alpha: Weight for time decay factor in similarity calculation
             k: Number of similar historical events to consider
+            model_path: Path to save/load FastText model (optional)
         """
         self.base_dir = base_dir
-        self.alpha = alpha  # Time decay weight
-        self.k = k  # Number of similar events to retrieve
+        self.alpha = alpha
+        self.k = k
         self.fasttext_model = None
+        self.model_path = model_path
         self.historical_events = []
         self.historical_labels = []
+        # 添加故障类型映射
+        self.fault_type_mapping = {
+            1: 'Return',
+            2: 'Exception',
+            3: 'Network Delay',
+            4: 'CPU Contention'
+        }
 
     def load_data(self, fault_dirs=None):
         """
@@ -176,7 +185,7 @@ class RCASystem:
 
         return " ".join(text_parts)
 
-    def train_fasttext_model(self, min_count=1, vector_size=100, window=5, sg=1, epochs=20):
+    def train_fasttext_model(self, min_count=1, vector_size=100, window=5, sg=1, epochs=20, force_retrain=False):
         """
         Train a FastText model on historical event texts
 
@@ -186,19 +195,30 @@ class RCASystem:
             window: Maximum distance between current and predicted word
             sg: Training algorithm: 1 for skip-gram; otherwise CBOW
             epochs: Number of iterations over the corpus
+            force_retrain: If True, force retraining even if model exists
         """
         if not self.historical_events:
             raise ValueError("没有历史事件数据，无法训练模型")
 
-        # Prepare texts for training
-        texts = [event['text'] for event in self.historical_events]
+        # 检查是否已有模型且无需强制重新训练
+        if self.fasttext_model is not None and not force_retrain:
+            print("FastText模型已存在，跳过训练")
+            return self.fasttext_model
 
+        # 如果指定了 model_path 且模型文件存在，则加载现有模型
+        if self.model_path and os.path.exists(self.model_path) and not force_retrain:
+            try:
+                self.fasttext_model = FastText.load(self.model_path)
+                print(f"从 {self.model_path} 加载现有FastText模型")
+                return self.fasttext_model
+            except Exception as e:
+                print(f"加载模型失败：{str(e)}，将训练新模型")
+
+        texts = [event['text'] for event in self.historical_events]
         if not texts:
             raise ValueError("没有有效的文本数据用于训练")
 
         print(f"准备训练数据，共 {len(texts)} 条文本")
-
-        # Train using gensim's FastText implementation
         sentences = [text.split() for text in texts]
 
         try:
@@ -211,6 +231,15 @@ class RCASystem:
                 epochs=epochs
             )
             print("FastText模型训练成功")
+
+            # 如果指定了 model_path，则保存模型到磁盘
+            if self.model_path:
+                try:
+                    self.fasttext_model.save(self.model_path)
+                    print(f"模型已保存到 {self.model_path}")
+                except Exception as e:
+                    print(f"保存模型失败：{str(e)}")
+
             return self.fasttext_model
         except Exception as e:
             raise ValueError(f"训练FastText模型时出错：{str(e)}")
@@ -297,7 +326,7 @@ class RCASystem:
             new_event: Dictionary with new event data
 
         Returns:
-            Predicted root cause label and explanation
+            Predicted root cause type and explanation
         """
         similar_events = self.find_similar_events(new_event)
 
@@ -315,19 +344,21 @@ class RCASystem:
 
         # Find the most frequent label, weighted by similarity score
         predicted_label = max(label_counts.items(), key=lambda x: x[1]['score_sum'])[0]
+        # 转换为故障类型
+        predicted_type = self.fault_type_mapping.get(predicted_label, 'Unknown')
 
         # Create explanation
-        explanation = f"Predicted root cause label: fault{predicted_label}\n\n"
+        explanation = f"Predicted root cause type: {predicted_type}\n\n"
         explanation += "Top similar historical events:\n"
         for i, (event, score) in enumerate(similar_events):
-            explanation += f"{i + 1}. fault{event['label']} (similarity: {score:.4f})\n"
-            # Extract some key log messages
+            event_type = self.fault_type_mapping.get(event['label'], 'Unknown')
+            explanation += f"{i + 1}. fault{event['label']} ({event_type}) (similarity: {score:.4f})\n"
             if not event['data']['logs'].empty and 'Log' in event['data']['logs'].columns:
                 top_logs = event['data']['logs']['Log'].dropna().head(2).tolist()
                 for log in top_logs:
                     explanation += f"   - {log[:100]}...\n"
 
-        return predicted_label, explanation
+        return predicted_type, explanation
 
     def analyze_new_fault(self, log_path, trace_path, metric_path):
         """
@@ -386,46 +417,41 @@ class RCASystem:
         if not self.historical_events:
             raise ValueError("No historical events loaded!")
 
-        # Prepare data for train-test split
         X = self.historical_events
         y = self.historical_labels
 
-        # Split data
         X_train, X_test, y_train, y_test = train_test_split(
             X, y, test_size=test_ratio, random_state=random_state, stratify=y
         )
 
-        # Keep only training data in the system
+        # 保存原始数据
+        original_events = self.historical_events
+        original_labels = self.historical_labels
+
+        # 设置为训练数据
         self.historical_events = X_train
         self.historical_labels = y_train
 
-        # Train the model on training data
+        # 训练模型（仅在未训练时）
         self.train_fasttext_model()
 
-        # Evaluate on test data
         correct = 0
         predictions = []
 
         for i, test_event in enumerate(X_test):
-            # Remove the label for prediction
             test_event_copy = test_event.copy()
             test_event_copy.pop('label', None)
-
-            # Predict
             pred_label, _ = self.predict_root_cause(test_event_copy)
             true_label = y_test[i]
-
             predictions.append((pred_label, true_label))
             if pred_label == true_label:
                 correct += 1
 
-        # Calculate accuracy
         accuracy = correct / len(X_test) if X_test else 0
 
-        # Reset the system to use all data
-        self.historical_events = X
-        self.historical_labels = y
-        self.train_fasttext_model()
+        # 恢复原始数据
+        self.historical_events = original_events
+        self.historical_labels = original_labels
 
         return {
             'accuracy': accuracy,
@@ -476,7 +502,7 @@ class RCASystem:
             metric_path: Path to metric.csv
 
         Returns:
-            None (displays plots)
+            None (saves plot to file)
         """
         metrics_df = pd.read_csv(metric_path)
         metrics_df = metrics_df.dropna(how='all')
@@ -485,14 +511,12 @@ class RCASystem:
             print("No valid metrics data found")
             return
 
-        # Plot CPU and memory usage for different pods
         plt.figure(figsize=(12, 8))
 
-        # Group by PodName
         if 'PodName' in metrics_df.columns and 'CpuUsageRate(%)' in metrics_df.columns:
             pods = metrics_df['PodName'].dropna().unique()
 
-            for i, pod in enumerate(pods[:5]):  # Limit to 5 pods for readability
+            for i, pod in enumerate(pods[:5]):
                 pod_data = metrics_df[metrics_df['PodName'] == pod]
 
                 plt.subplot(2, 1, 1)
@@ -507,31 +531,24 @@ class RCASystem:
                     plt.legend()
 
         plt.tight_layout()
-        plt.show()
-
+        plt.savefig('metrics_plot.png')  # 保存图像到文件
+        print("Metrics plot saved to 'metrics_plot.png'")
 
 def main():
     """
     主函数：用于手动输入故障编号进行根因分析
     """
     try:
-        # 初始化RCA系统
-        rca = RCASystem()
-
-        # 加载所有历史故障数据
+        rca = RCASystem(model_path='fasttext_model.bin')
         print("正在加载历史故障数据...")
         try:
             rca.load_data()
         except ValueError as e:
             print(f"错误：{str(e)}")
-            print("请确保：")
-            print("1. TrainTicket文件夹与fasttext.py在同一目录下")
-            print("2. TrainTicket文件夹中有fault1, fault2等故障文件夹")
-            print("3. 每个故障文件夹中都有完整的log.csv, trace.csv和metric.csv文件")
+            print("请确保：\n1. TrainTicket文件夹与fasttext.py在同一目录下\n2. TrainTicket文件夹中有fault1, fault2等故障文件夹\n3. 每个故障文件夹中都有完整的log.csv, trace.csv和metric.csv文件")
             return
 
-        # 训练FastText模型
-        print("正在训练FastText模型...")
+        print("正在训练或加载FastText模型...")
         try:
             rca.train_fasttext_model()
         except ValueError as e:
@@ -539,60 +556,32 @@ def main():
             return
 
         while True:
-            # 获取用户输入的故障编号
             fault_num = input("\n请输入要分析的故障编号（输入'q'退出）: ")
-
             if fault_num.lower() == 'q':
                 break
-
             try:
                 fault_num = int(fault_num)
-                fault_dir = f'fault_{fault_num}'  # 添加下划线匹配实际文件夹名
-
-                # 构建文件路径
+                fault_dir = f'fault_{fault_num}'
                 log_path = f'./TrainTicket/{fault_dir}/log.csv'
                 trace_path = f'./TrainTicket/{fault_dir}/trace.csv'
                 metric_path = f'./TrainTicket/{fault_dir}/metric.csv'
-
-                # 添加调试信息
-                print(f"\n检查文件路径：")
-                print(f"故障目录: {fault_dir}")
-                print(f"log文件: {log_path} - {'存在' if os.path.exists(log_path) else '不存在'}")
-                print(f"trace文件: {trace_path} - {'存在' if os.path.exists(trace_path) else '不存在'}")
-                print(f"metric文件: {metric_path} - {'存在' if os.path.exists(metric_path) else '不存在'}")
-
-                # 检查文件是否存在
+                print(f"\n检查文件路径：\n故障目录: {fault_dir}\nlog文件: {log_path} - {'存在' if os.path.exists(log_path) else '不存在'}\ntrace文件: {trace_path} - {'存在' if os.path.exists(trace_path) else '不存在'}\nmetric文件: {metric_path} - {'存在' if os.path.exists(metric_path) else '不存在'}")
                 if not all(os.path.exists(path) for path in [log_path, trace_path, metric_path]):
                     print(f"错误：故障{fault_num}的数据文件不完整，请检查文件是否存在")
                     continue
-
-                # 分析故障
                 print(f"\n正在分析故障{fault_num}...")
-                label, explanation = rca.analyze_new_fault(log_path, trace_path, metric_path)
-
-                # 输出分析结果
-                print("\n分析结果：")
-                print("=" * 50)
-                print(f"预测的根因标签: fault{label}")
-                print("\n详细解释：")
-                print(explanation)
-                print("=" * 50)
-
-                # 分析错误模式
+                fault_type, explanation = rca.analyze_new_fault(log_path, trace_path, metric_path)
+                print("\n分析结果：\n" + "=" * 50 + f"\n预测的根因类型: {fault_type}\n\n详细解释：\n{explanation}\n" + "=" * 50)
                 print("\n错误模式分析：")
                 error_analysis = rca.analyze_error_patterns(log_path, trace_path, metric_path)
                 for error_type, count in error_analysis['top_errors']:
                     print(f"- {error_type}: {count}次出现")
-
-                # 可视化指标
                 print("\n正在生成指标可视化...")
                 rca.visualize_metrics(metric_path)
-
             except ValueError:
                 print("错误：请输入有效的数字")
             except Exception as e:
                 print(f"分析过程中出现错误：{str(e)}")
-
     except Exception as e:
         print(f"系统初始化失败：{str(e)}")
 
