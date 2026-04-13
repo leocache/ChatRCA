@@ -1,0 +1,6 @@
+{
+    "inject_time": "2024/6/14  20:18:58",
+    "inject_timestamp": "1718367538",
+    "inject_target": "chaos-node02",
+    "inject_type": "memory_contention"
+}

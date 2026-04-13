@@ -1,0 +1,6 @@
+{
+    "inject_time": "2024-06-20 23:13:04",
+    "inject_timestamp": "1718896384",
+    "inject_target": "onlineapp109",
+    "inject_type": "cpu_contention"
+}
