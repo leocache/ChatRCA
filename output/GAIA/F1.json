@@ -1,0 +1,196 @@
+[
+  {
+    "incident_id": "2021-07-04_00:37:11.553000_to_2021-07-04_00:37:22.553000",
+    "root_cause_category": "resource",
+    "root_cause_detail": "The 'mobservice' service experienced failures due to resource-related issues, specifically memory exhaustion during the failure window.",
+    "service_location": {
+      "dataset": "GAIA DataSet",
+      "namespace": "",
+      "service": "mobservice",
+      "pod": "",
+      "container": "",
+      "node": "0.0.0.1",
+      "ip": "",
+      "trace_service": "",
+      "trace_span": ""
+    },
+    "affected_service": "mobservice",
+    "confidence": 0.9,
+    "evidence": [
+      {
+        "source_type": "log",
+        "source_name": "mobservice1",
+        "abnormal_field": "message",
+        "abnormal_value": "uuid:e9b03d60-dc1c-11eb-8318-0242ac110003 information has expired, mobile phone login is invalid",
+        "reason": "The log message indicates an error in the service related to mobile phone login validation."
+      },
+      {
+        "source_type": "metric",
+        "source_name": "docker_memory_usage_total.csv",
+        "abnormal_field": "value",
+        "abnormal_value": "2362462208",
+        "reason": "The memory usage for 'mobservice' instance was high during the failure period, indicating potential memory exhaustion."
+      },
+      {
+        "source_type": "metric",
+        "source_name": "docker_memory_usage_max.csv",
+        "abnormal_field": "value",
+        "abnormal_value": "3434000384",
+        "reason": "The max memory usage for 'mobservice' instance is close to the limit (6442450944), suggesting a memory pressure on the container."
+      },
+      {
+        "source_type": "metric",
+        "source_name": "docker_memory_stats_total_pgpgin.csv",
+        "abnormal_field": "value",
+        "abnormal_value": "6864759",
+        "reason": "High page-in operations indicate the system was facing memory pressure and swapping."
+      }
+    ],
+    "expert_findings": [
+      {
+        "expert_name": "ResourceExpert",
+        "root_cause_category": "resource",
+        "service_location": {
+          "dataset": "GAIA DataSet",
+          "namespace": "",
+          "service": "mobservice",
+          "pod": "",
+          "container": "",
+          "node": "0.0.0.1",
+          "ip": "",
+          "trace_service": "",
+          "trace_span": ""
+        },
+        "summary": "The 'mobservice' service experienced failures due to resource-related issues. Specifically, the 'mobservice' instance running on node '0.0.0.1' encountered memory exhaustion during the failure window.",
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "source_type": "log",
+            "source_name": "mobservice1",
+            "abnormal_field": "message",
+            "abnormal_value": "uuid:e9b03d60-dc1c-11eb-8318-0242ac110003 information has expired, mobile phone login is invalid",
+            "reason": "The log message indicates an error in the service related to mobile phone login validation."
+          },
+          {
+            "source_type": "metric",
+            "source_name": "docker_memory_usage_total.csv",
+            "abnormal_field": "value",
+            "abnormal_value": "2362462208",
+            "reason": "The memory usage for 'mobservice' instance was high during the failure period, indicating potential memory exhaustion."
+          },
+          {
+            "source_type": "metric",
+            "source_name": "docker_memory_usage_max.csv",
+            "abnormal_field": "value",
+            "abnormal_value": "3434000384",
+            "reason": "The max memory usage for 'mobservice' instance is close to the limit (6442450944), suggesting a memory pressure on the container."
+          },
+          {
+            "source_type": "metric",
+            "source_name": "docker_memory_stats_total_pgpgin.csv",
+            "abnormal_field": "value",
+            "abnormal_value": "6864759",
+            "reason": "High page-in operations indicate the system was facing memory pressure and swapping."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "incident_id": "2021-07-04_00:37:11.553000_to_2021-07-04_00:37:22.553000",
+    "root_cause_category": "dependency",
+    "root_cause_detail": "QR code expiration and downstream service errors in redisservice causing mobile login failure",
+    "service_location": {
+      "dataset": "GAIA",
+      "namespace": "",
+      "service": "redisservice1",
+      "pod": "",
+      "container": "",
+      "node": "",
+      "ip": "0.0.0.1",
+      "trace_service": "",
+      "trace_span": "s5"
+    },
+    "affected_service": "mobservice1",
+    "confidence": 0.9,
+    "evidence": [
+      {
+        "source_type": "log",
+        "source_name": "redisservice1",
+        "abnormal_field": "二维码已过期， 请刷新重新扫描",
+        "abnormal_value": "400",
+        "reason": "QR code expiration caused redisservice1 to throw an error"
+      },
+      {
+        "source_type": "log",
+        "source_name": "mobservice1",
+        "abnormal_field": "uuid:e9b03d60-dc1c-11eb-8318-0242ac110003 information has expired",
+        "abnormal_value": "500",
+        "reason": "Mobservice1 failed due to expired user information related to the QR code"
+      },
+      {
+        "source_type": "trace",
+        "source_name": "redisservice1",
+        "abnormal_field": "status_code",
+        "abnormal_value": "400",
+        "reason": "Trace logs show redisservice1 returning 400 error due to QR code expiration"
+      },
+      {
+        "source_type": "trace",
+        "source_name": "mobservice1",
+        "abnormal_field": "status_code",
+        "abnormal_value": "500",
+        "reason": "Trace logs show mobservice1 returning 500 error due to issues in redisservice1"
+      }
+    ],
+    "expert_findings": [
+      {
+        "expert_name": "OperationEngineer",
+        "root_cause_category": "dependency",
+        "service_location": {
+          "dataset": "GAIA",
+          "namespace": "",
+          "service": "redisservice1",
+          "pod": "",
+          "container": "",
+          "node": "",
+          "ip": "0.0.0.1",
+          "trace_service": "",
+          "trace_span": "s5"
+        },
+        "summary": "Failure caused by QR code expiration and downstream service errors in redisservice causing mobile login failure.",
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "source_type": "log",
+            "source_name": "redisservice1",
+            "abnormal_field": "二维码已过期， 请刷新重新扫描",
+            "abnormal_value": "400",
+            "reason": "QR code expiration caused redisservice1 to throw an error"
+          },
+          {
+            "source_type": "log",
+            "source_name": "mobservice1",
+            "abnormal_field": "uuid:e9b03d60-dc1c-11eb-8318-0242ac110003 information has expired",
+            "abnormal_value": "500",
+            "reason": "Mobservice1 failed due to expired user information related to the QR code"
+          },
+          {
+            "source_type": "trace",
+            "source_name": "redisservice1",
+            "abnormal_field": "status_code",
+            "abnormal_value": "400",
+            "reason": "Trace logs show redisservice1 returning 400 error due to QR code expiration"
+          },
+          {
+            "source_type": "trace",
+            "source_name": "mobservice1",
+            "abnormal_field": "status_code",
+            "abnormal_value": "500",
+            "reason": "Trace logs show mobservice1 returning 500 error due to issues in redisservice1"
+          }
+        ]
+      }
+    ]
+  }
+]

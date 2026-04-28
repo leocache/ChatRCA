@@ -33,6 +33,6 @@ def run_GAIA_fault():
     )
 
 if __name__ == '__main__':
-    # run_TrainTicket_fault()
-    run_GAIA_fault()
+    run_TrainTicket_fault()
+    # run_GAIA_fault()
     # get_fault_type_census("GAIA", 'groundtruth.txt', 'txt', "anomaly_type")
