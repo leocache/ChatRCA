@@ -1,7 +1,0 @@
-Unnamed: 0,date,timestamp,cmdb_id,kpi_name,value,beijing_time
-197263,2021-07-04,1625349490.0,0.0.0.4.dbservice1,docker_diskio_summary_service_time,59386146161.0,2021-07-04 05:58:10
-729370,2021-07-04,1625349490.0,0.0.0.4.mobservice2,docker_diskio_summary_service_time,58302883031.0,2021-07-04 05:58:10
-452783,2021-07-04,1625349499.0,0.0.0.1.zookeeper,docker_diskio_summary_service_time,1589133246.0,2021-07-04 05:58:19
-378731,2021-07-04,1625349499.0,0.0.0.1.webservice1,docker_diskio_summary_service_time,141421357.0,2021-07-04 05:58:19
-805193,2021-07-04,1625349499.0,0.0.0.1.mobservice1,docker_diskio_summary_service_time,1238993.0,2021-07-04 05:58:19
-121033,2021-07-04,1625349499.0,0.0.0.1.redisservice1,docker_diskio_summary_service_time,199876810.0,2021-07-04 05:58:19

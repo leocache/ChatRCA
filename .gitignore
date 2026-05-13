@@ -1,2 +1,6 @@
-/src/.env
+.env
+__pycache__/
+.cache/
 .specstory/
+.idea/
+.vscode/

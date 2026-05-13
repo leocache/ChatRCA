@@ -1,4 +1,0 @@
-TimeUnixNano,TraceID,SpanID,Log
-1674985367542409365,t26,s1501,ERROR e.s.ExecuteServiceImpl#51 [ticketExecute][getOrderByIdFromOrder][ticket execute error: Order Status Wrong][orderId: d76be56c-d559-4957-a0d4-35d5ea9e6e55]
-1674985358787940153,t32,s1768,ERROR o.a.c.c.C.[.[.[.[dispatcherServlet]#175 Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: No instances available for ts-travel-service] with root cause
-1674985367130644928,t36,s2116,ERROR o.a.c.c.C.[.[.[.[dispatcherServlet]#175 Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: No instances available for ts-travel-service] with root cause

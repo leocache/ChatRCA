@@ -1,5 +1,0 @@
-TimeUnixNano,TraceID,SpanID,Log
-1674984639401445947,t7,s2422,ERROR e.s.ExecuteServiceImpl#69 [ticketExecute][but][ticket execute error: Order Status Wrong][orderId: f22b4711-c04c-4246-9b80-d96d1ab0bdc5]
-1674984621488418156,t10,s2103,ERROR o.a.c.c.C.[.[.[.[dispatcherServlet]#175 Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: No instances available for ts-train-food-service] with root cause
-1674984619549038747,t12,s2028,ERROR o.a.c.c.C.[.[.[.[dispatcherServlet]#175 Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: No instances available for ts-train-food-service] with root cause
-1674984628097999522,t21,s1482,ERROR o.a.c.c.C.[.[.[.[dispatcherServlet]#175 Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: No instances available for ts-train-food-service] with root cause

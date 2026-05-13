@@ -1,3 +1,0 @@
-TimeUnixNano,TraceID,SpanID,Log
-1674987168810842287,t3,s257,ERROR o.a.c.c.C.[.[.[.[dispatcherServlet]#175 Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: No instances available for ts-basic-service] with root cause
-1674987171490878714,t15,s307,ERROR o.a.c.c.C.[.[.[.[dispatcherServlet]#175 Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: No instances available for ts-basic-service] with root cause

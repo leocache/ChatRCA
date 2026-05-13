@@ -1,6 +1,0 @@
-beijing_time,message,parent_id,service_name,span_id,status_code,trace_id
-2021-07-04 05:40:14,request call function 1 redisservice2.get_key_value_from_redis,s107,redisservice2,s98,400,t11
-2021-07-04 05:40:14,request call function 1 logservice1.login_query_redis_info,s103,logservice1,s100,500,t11
-2021-07-04 05:40:14,request call function 1 redisservice1.get_key_value_from_redis,s100,redisservice1,s101,400,t11
-2021-07-04 05:40:14,request call function 1 webservice1.web_login_service,,webservice1,s103,500,t11
-2021-07-04 05:40:14,request call function 1 mobservice2.mob_info_to_redis,s103,mobservice2,s107,500,t11

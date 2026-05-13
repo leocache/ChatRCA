@@ -1,4 +1,0 @@
-TimeUnixNano,TraceID,SpanID,Log
-1675002229072326030,t4,s927,ERROR o.a.c.c.C.[.[.[.[dispatcherServlet]#175 Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: No instances available for ts-travel2-service] with root cause
-1675002216992532145,t13,s1544,"ERROR f.s.FoodServiceImpl#302 [getAllFood][Get the Get Food Request Failed!][foodStoresListResult is null][date: 2021-07-14, tripId: D1345]"
-1675002230709964729,t26,s322,ERROR e.s.ExecuteServiceImpl#51 [ticketExecute][getOrderByIdFromOrder][ticket execute error: Order Status Wrong][orderId: 7c4fce39-2b47-41af-b523-96d707d81419]

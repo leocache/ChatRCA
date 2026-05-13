@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Black">
-    <option name="sdkName" value="python_llm" />
+    <option name="sdkName" value="chatrca" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="python_llm" project-jdk-type="Python SDK" />
 </project>

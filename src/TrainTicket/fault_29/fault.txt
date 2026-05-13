@@ -1,6 +1,0 @@
-{
-    "inject_time": "2023-01-30 11:51:46",
-    "inject_timestamp": "1675079506",
-    "inject_pod": "ts-contacts-service-866bd68c97-dzqgd",
-    "inject_type": "network_delay"
-}

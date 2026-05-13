@@ -1,6 +1,0 @@
-{
-    "inject_time": "2023-01-30 14:00:16",
-    "inject_timestamp": "1675087216",
-    "inject_pod": "ts-security-service-cb9788d56-bdkcx",
-    "inject_type": "network_delay"
-}

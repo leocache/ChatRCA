@@ -1,4 +1,0 @@
-Unnamed: 0,date,timestamp,cmdb_id,kpi_name,value,beijing_time
-509058,2021-07-04,1625349490.0,0.0.0.1.redisservice1,docker_cpu_core_2_ticks,11087457.0,2021-07-04 05:58:10
-363790,2021-07-04,1625349490.0,0.0.0.1.mobservice1,docker_cpu_core_2_ticks,1062175441.0,2021-07-04 05:58:10
-614065,2021-07-04,1625349490.0,0.0.0.1.webservice1,docker_cpu_core_2_ticks,207502414404476.0,2021-07-04 05:58:10

@@ -1,5 +1,0 @@
-beijing_time,message,parent_id,service_name,span_id,status_code,trace_id
-2021-07-04 18:13:04,request call function 1 logservice1.login_model_implement,s2,logservice1,s1,200,t1
-2021-07-04 18:13:04,request call function 1 logservice2.login_query_redis_info,s4,logservice2,s2,200,t1
-2021-07-04 18:13:04,request call function 1 dbservice1.db_login_methods,s1,dbservice1,s3,200,t1
-2021-07-04 18:13:04,request call function 1 webservice2.web_login_service,,webservice2,s4,200,t1

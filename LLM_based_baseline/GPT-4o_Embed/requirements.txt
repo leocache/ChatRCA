@@ -1,9 +1,0 @@
-openai==1.32.0
-pyautogen==0.2.32
-python-dotenv==1.0.1
-PyYAML==6.0.1
-chromadb==0.5.3
-langchain===0.2.10
-langchain_chroma===0.1.2
-langchain_openai===0.1.17
-langchain_community===0.2.9

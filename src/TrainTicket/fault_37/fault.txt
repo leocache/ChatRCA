@@ -1,6 +1,0 @@
-{
-    "inject_time": "2023-01-30 12:59:36",
-    "inject_timestamp": "1675083576",
-    "inject_pod": "ts-food-service-f5756978c-6sb8t",
-    "inject_type": "network_delay"
-}

@@ -1,9 +1,0 @@
-TimeUnixNano,TraceID,SpanID,Log
-1675082215657646410,t18,s464,ERROR o.a.c.c.C.[.[.[.[dispatcherServlet]#175 Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: No instances available for ts-food-service] with root cause
-1675082221168970455,t11,s1092,ERROR o.a.c.c.C.[.[.[.[dispatcherServlet]#175 Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: No instances available for ts-food-service] with root cause
-1675082214666399328,t17,s1201,"ERROR f.s.FoodServiceImpl#302 [getAllFood][Get the Get Food Request Failed!][foodStoresListResult is null][date: 2021-07-14, tripId: D1345]"
-1675082220747916881,t16,s990,"ERROR f.s.FoodServiceImpl#302 [getAllFood][Get the Get Food Request Failed!][foodStoresListResult is null][date: 2021-07-14, tripId: D1345]"
-1675082220709024614,t1,s303,ERROR e.s.ExecuteServiceImpl#51 [ticketExecute][getOrderByIdFromOrder][ticket execute error: Order Status Wrong][orderId: 9f3deec8-e1e3-4614-b693-2fd9eeeef9ec]
-1675082223470082323,t28,s406,ERROR e.s.ExecuteServiceImpl#51 [ticketExecute][getOrderByIdFromOrder][ticket execute error: Order Status Wrong][orderId: 9f3deec8-e1e3-4614-b693-2fd9eeeef9ec]
-1675082243633308171,t14,s1392,ERROR e.s.ExecuteServiceImpl#51 [ticketExecute][getOrderByIdFromOrder][ticket execute error: Order Status Wrong][orderId: 0f29eeb3-4d66-4b7e-9cdd-e3f3d5089841]
-1675082247516192661,t23,s262,ERROR e.s.ExecuteServiceImpl#51 [ticketExecute][getOrderByIdFromOrder][ticket execute error: Order Status Wrong][orderId: 0f29eeb3-4d66-4b7e-9cdd-e3f3d5089841]

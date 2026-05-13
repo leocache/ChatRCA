@@ -1,6 +1,0 @@
-{
-    "inject_time": "2023-01-29 10:56:45",
-    "inject_timestamp": "1674961005",
-    "inject_pod": "ts-route-service-b6c59fb57-zv8dt",
-    "inject_type": "exception"
-}

@@ -1,4 +1,0 @@
-Unnamed: 0,date,timestamp,cmdb_id,kpi_name,value,beijing_time
-198333,2021-07-04,1625350008.0,0.0.0.1.webservice1,docker_memory_usage_pct,0.4502506256103515,2021-07-04 06:06:48
-641381,2021-07-04,1625350008.0,0.0.0.1.redisservice1,docker_memory_usage_pct,0.4526805877685547,2021-07-04 06:06:48
-81878,2021-07-04,1625350008.0,0.0.0.1.mobservice1,docker_memory_usage_pct,0.3657608032226562,2021-07-04 06:06:48

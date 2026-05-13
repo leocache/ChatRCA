@@ -1,6 +1,0 @@
-{
-    "inject_time": "2023-01-29 11:29:03",
-    "inject_timestamp": "1674962943",
-    "inject_pod": "ts-price-service-76846864d9-g465z",
-    "inject_type": "exception"
-}

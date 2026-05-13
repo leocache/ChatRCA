@@ -1,4 +1,0 @@
-Unnamed: 0,date,timestamp,cmdb_id,kpi_name,value,beijing_time
-793176,2021-07-04,1625382957.0,0.0.0.3.logservice1,docker_diskio_write_service_time,17766215.0,2021-07-04 15:15:57
-503761,2021-07-04,1625382957.0,0.0.0.3.redis,docker_diskio_write_service_time,2883018685300.0,2021-07-04 15:15:57
-867976,2021-07-04,1625382957.0,0.0.0.3.webservice2,docker_diskio_write_service_time,5260967021.0,2021-07-04 15:15:57

@@ -1,6 +1,0 @@
-{
-    "inject_time": "2024/6/21 0:13:05",
-    "inject_timestamp": "1718899985",
-    "inject_target": "onlineapp109",
-    "inject_type": "node_abnormal"
-}
