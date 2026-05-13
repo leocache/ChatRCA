@@ -1,5 +1,12 @@
 # ChatRCA
 
+[![Python](https://img.shields.io/badge/Python-%3E3.10-blue.svg)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![LLM: GPT-4o](https://img.shields.io/badge/LLM-GPT--4o-green.svg)](https://openai.com/)
+[![Framework: AutoGen](https://img.shields.io/badge/Framework-AutoGen-orange.svg)](https://microsoft.github.io/autogen/)
+[![Dataset: TrainTicket](https://img.shields.io/badge/Dataset-TrainTicket-9cf.svg)](https://github.com/FudanSELab/train-ticket)
+[![Domain: AIOps](https://img.shields.io/badge/Domain-AIOps-purple.svg)](https://en.wikipedia.org/wiki/AIOps)
+
 > Enhancing Root Cause Analysis via LLM-based Multi-Agents with Human-in-the-Loop
 
 ChatRCA is an advanced tool for root cause analysis of cloud events. It builds a multi-intelligent agent root cause analysis method with humans in the loop, simulating the collaborative model in real-world root cause analysis. Multiple domain experts (Architecture, Resource, Network) collaborate through a group chat, observe abnormal data, and produce a structured diagnosis with root cause category, service location, and evidence.
