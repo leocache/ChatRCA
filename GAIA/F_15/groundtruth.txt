@@ -1,0 +1,13 @@
+Ground Truth Record 15
+Unnamed: 0: 14
+index: 14
+date: 2021-07-04
+service: mobservice
+instance: mobservice1
+message: 2021-07-04 06:19:58,153 | WARNING | 0.0.0.1 | 172.17.0.5 | mobservice1 | aa38388699978cbd | wait for 11 seconds for follow-up operations to simulate the login failure of the QR code expired
+level: WARNING
+anomaly_type: [login failure]
+st_time: 2021-07-04 06:19:58.153000
+ed_time: 2021-07-04 06:20:09.153000
+duration: 11
+data_type: train

@@ -1,0 +1,13 @@
+Ground Truth Record 18
+Unnamed: 0: 17
+index: 17
+date: 2021-07-04
+service: webservice
+instance: webservice2
+message: 2021-07-04 08:10:00,568 | WARNING | 0.0.0.3 | 172.17.0.4 | webservice2 | trigger the file moving program, start with 2021-07-04 08:00:00.471022, last for 600 seconds
+level: WARNING
+anomaly_type: [file moving program]
+st_time: 2021-07-04 08:00:00.471022
+ed_time: 2021-07-04 08:10:00.471022
+duration: 600
+data_type: train

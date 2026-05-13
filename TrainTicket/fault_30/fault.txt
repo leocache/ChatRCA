@@ -1,0 +1,6 @@
+{
+    "inject_time": "2023-01-30 11:59:21",
+    "inject_timestamp": "1675079961",
+    "inject_pod": "ts-basic-service-5dc8d4f9fd-llznp",
+    "inject_type": "cpu_contention"
+}

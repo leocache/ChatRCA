@@ -1,0 +1,6 @@
+{
+    "inject_time": "2024-5-21 0:48:07",
+    "inject_timestamp": "1716223687",
+    "inject_target": "10.131.114.4",
+    "inject_type": "cpu_contention"
+}

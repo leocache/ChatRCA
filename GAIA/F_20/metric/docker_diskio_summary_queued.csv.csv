@@ -1,0 +1,4 @@
+Unnamed: 0,date,timestamp,cmdb_id,kpi_name,value,beijing_time
+580384,2021-07-04,1625361619.0,0.0.0.1.mobservice1,docker_diskio_summary_queued,0.0,2021-07-04 09:20:19
+4311,2021-07-04,1625361619.0,0.0.0.1.redisservice1,docker_diskio_summary_queued,0.0,2021-07-04 09:20:19
+185561,2021-07-04,1625361619.0,0.0.0.1.webservice1,docker_diskio_summary_queued,0.0,2021-07-04 09:20:19

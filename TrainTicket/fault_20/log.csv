@@ -1,0 +1,15 @@
+TimeUnixNano,TraceID,SpanID,Log
+1674990263981404424,t22,s29,"ERROR f.s.FoodServiceImpl#302 [getAllFood][Get the Get Food Request Failed!][foodStoresListResult is null][date: 2021-07-14, tripId: D1345]"
+1674990259355434987,t42,s1990,"ERROR f.s.FoodServiceImpl#302 [getAllFood][Get the Get Food Request Failed!][foodStoresListResult is null][date: 2021-07-14, tripId: D1345]"
+1674990275057199011,t19,s298,"ERROR f.s.FoodServiceImpl#302 [getAllFood][Get the Get Food Request Failed!][foodStoresListResult is null][date: 2021-07-14, tripId: D1345]"
+1674990276690062978,t15,s939,"ERROR f.s.FoodServiceImpl#302 [getAllFood][Get the Get Food Request Failed!][foodStoresListResult is null][date: 2021-07-14, tripId: D1345]"
+1674990274506295727,t28,s616,"ERROR f.s.FoodServiceImpl#302 [getAllFood][Get the Get Food Request Failed!][foodStoresListResult is null][date: 2021-07-14, tripId: D1345]"
+1674990269686530568,t34,s1468,"ERROR f.s.FoodServiceImpl#302 [getAllFood][Get the Get Food Request Failed!][foodStoresListResult is null][date: 2021-07-14, tripId: D1345]"
+1674990259621349577,t18,s604,ERROR o.a.c.c.C.[.[.[.[dispatcherServlet]#175 Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: No instances available for ts-basic-service] with root cause
+1674990254345567162,t24,s731,ERROR e.s.ExecuteServiceImpl#51 [ticketExecute][getOrderByIdFromOrder][ticket execute error: Order Status Wrong][orderId: db443ca7-2ebc-4fe8-a80d-3b881feb905e]
+1674990257913291560,t35,s2472,ERROR e.s.ExecuteServiceImpl#69 [ticketExecute][getOrderByIdFromOrderOther][ticket execute error: Order Status Wrong][orderId: 6330a645-07cd-4161-807b-3b3eb9eee21d]
+1674990262172761968,t40,s1232,ERROR e.s.ExecuteServiceImpl#51 [ticketExecute][getOrderByIdFromOrder][ticket execute error: Order Status Wrong][orderId: db443ca7-2ebc-4fe8-a80d-3b881feb905e]
+1674990250674946472,t29,s715,ERROR e.s.ExecuteServiceImpl#69 [ticketExecute][getOrderByIdFromOrderOther][ticket execute error: Order Status Wrong][orderId: 6330a645-07cd-4161-807b-3b3eb9eee21d]
+1674990251065974785,t36,s1217,ERROR e.s.ExecuteServiceImpl#51 [ticketExecute][getOrderByIdFromOrder][ticket execute error: Order Status Wrong][orderId: db443ca7-2ebc-4fe8-a80d-3b881feb905e]
+1674990279292928805,t4,s219,ERROR o.a.c.c.C.[.[.[.[dispatcherServlet]#175 Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: No instances available for ts-seat-service] with root cause
+1674990246600056565,t7,s1178,ERROR o.a.c.c.C.[.[.[.[dispatcherServlet]#175 Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: No instances available for ts-travel-service] with root cause

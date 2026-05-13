@@ -1,0 +1,15 @@
+beijing_time,message,parent_id,service_name,span_id,status_code,trace_id
+2021-07-04 19:47:50,request call function 1 redisservice1.get_key_value_from_redis,s15,redisservice1,s1,200,t1
+2021-07-04 19:47:50,request call function 1 webservice1.web_login_service,,webservice1,s2,200,t2
+2021-07-04 19:47:50,request call function 1 redisservice1.get_key_value_from_redis,s6,redisservice1,s3,300,t1
+2021-07-04 19:47:50,request call function 1 redisservice2.keys_existence_checks,s20,redisservice2,s4,200,t1
+2021-07-04 19:47:50,request call function 1 redisservice2.set_key_value_into_redis,s18,redisservice2,s5,200,t1
+2021-07-04 19:47:50,request call function 1 mobservice2.mob_info_to_redis,s18,mobservice2,s6,200,t1
+2021-07-04 19:47:50,request call function 1 logservice2.login_query_redis_info,s2,logservice2,s7,200,t2
+2021-07-04 19:47:50,request call function 1 redisservice1.set_key_value_into_redis,s6,redisservice1,s8,200,t1
+2021-07-04 19:47:50,request call function 1 logservice1.login_model_implement,s7,logservice1,s9,200,t2
+2021-07-04 19:47:50,request call function 1 dbservice2.db_login_methods,s9,dbservice2,s10,200,t2
+2021-07-04 19:47:51,request call function 1 logservice1.login_query_redis_info,s18,logservice1,s15,500,t1
+2021-07-04 19:47:51,request call function 1 webservice1.web_login_service,,webservice1,s18,500,t1
+2021-07-04 19:47:51,request call function 1 logservice2.login_model_implement,s15,logservice2,s19,500,t1
+2021-07-04 19:47:51,request call function 1 dbservice2.db_login_methods,s19,dbservice2,s20,500,t1

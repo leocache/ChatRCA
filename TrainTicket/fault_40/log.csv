@@ -1,0 +1,2 @@
+TimeUnixNano,TraceID,SpanID,Log
+1675084942726525357,t27,s374,ERROR e.s.ExecuteServiceImpl#51 [ticketExecute][getOrderByIdFromOrder][ticket execute error: Order Status Wrong][orderId: ba353d6e-71ab-41be-a5fe-58e699bc4587]

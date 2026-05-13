@@ -1,0 +1,9 @@
+timestamp,log_level,service_name,trace_id,message
+"2021-07-04 15:19:30,028",WARNING,redisservice2,t3,"用户未扫描，请等待！, status_code: 300"
+"2021-07-04 15:19:30,621",ERROR,webservice2,t3,an error occurred in the downstream service
+"2021-07-04 15:19:30,602",ERROR,dbservice1,t3,"(pymysql.err.ProgrammingError) (1146, ""Table 'cloudwise_micross.system_metric_datas' doesn't exist"")[SQL: select service_names, system_data_time, system_cpu_utilization, system_memory_usage,system_disk_usage, disk_io_read_count, disk_io_write_count,system_network, network_io_read_count, network_io_write_count from system_metric_datas](Background on this error at: http://sqlalche.me/e/14/f405)"
+"2021-07-04 15:19:34,183",ERROR,redisservice1,t5,"二维码已过期， 请刷新重新扫描, status_code: 400"
+"2021-07-04 15:19:34,190",ERROR,logservice1,t5,"get information failed, fail code: 400"
+"2021-07-04 15:19:34,108",ERROR,mobservice2,t5,"uuid:27f6b2e0-dc98-11eb-8a59-0242ac110003 information has expired, mobile phone login is invalid"
+"2021-07-04 15:19:34,193",ERROR,webservice1,t5,an error occurred in the downstream service
+"2021-07-04 15:19:34,099",ERROR,redisservice2,t5,"二维码已过期， 请刷新重新扫描, status_code: 400"
